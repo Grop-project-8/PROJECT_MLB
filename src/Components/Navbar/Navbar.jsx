@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="md:hidden flex flex-col space-y-4 absolute top-[10%] right-[50%]">
           <a href="">Home</a>
           <a href="">Activity</a>
-          <a href="">News</a>
+          <a href="">Article</a>
           <a href="">Contact</a>
         </div>
       )}
