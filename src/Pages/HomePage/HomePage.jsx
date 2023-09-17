@@ -1,13 +1,14 @@
-import Hero from "../../components/Hero/Hero"
-import Discription from "../../components/Hero/Discription"
+import Hero from "../../Components/Hero/Hero";
+import Discription from "../../components/Hero/Discription";
 
 function HomePage() {
   return (
-    <>
-    <Hero/>
-    <Discription/>
-    </>
-  )
+    <div>
+      <Hero />
+      <Discription />
+    </div>
+  );
 }
 
-export default HomePage
+export default HomePage;
+ 

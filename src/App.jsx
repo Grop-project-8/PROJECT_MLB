@@ -1,4 +1,3 @@
-
 import './App.css'
 import HomePage from './Pages/HomePage/HomePage'
 function App() {
@@ -6,7 +5,6 @@ function App() {
   return (
     <>
     <HomePage/>
-    
     </>
   )
 }

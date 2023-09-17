@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Discription() {
+function Discription () {
   return (
     <div>
         <div>
