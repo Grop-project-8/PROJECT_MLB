@@ -8,11 +8,11 @@ function Discription() {
         </div>
 
         <div className='flex flex-col justify-center mx-auto md:text-center'>
-            <h1 className='text-3xl'>Description for this webiste</h1>
-            <p className='text-2xl '>The quick brown fox jumps over the lazy dog</p>
+            <h1 className='2xl:text-2xl xl:text-xl lg:text-lg text-sm'>Description for this webiste</h1>
+            <p className='text-myGray font-poppins  2xl:text-sm text-xs'>The quick brown fox jumps over the lazy dog</p>
         </div>
     </div>
-  )
+  );
 }
 
-export default Discription
+export default Discription;

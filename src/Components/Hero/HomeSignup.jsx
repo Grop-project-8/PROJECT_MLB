@@ -2,16 +2,23 @@ import hero3 from '../../assets/hero/hero3.svg'
 
 function HomeSignup() {
   return (
-    <div className='lg:container flex justify-between'>
-        <div className='flex flex-col justify-center mx-auto'>
-        <h1 className='text-4xl text-center w-[35rem]'>Track your history,progress and set personal goal</h1>
-        <button className='bg-myGreen w-[50%] p-3 mt-6 rounded-lg'>sign up here</button>
-        </div>
+    <div className='xl:container my-6 lg:flex'>
+      <div className='relative flex justify-center '>
+        <div className='absolute text-center'>
+          <div className='w-[75%] mx-auto mt-40 '>
+          <h1 className='2xl:text-2xl xl:text-xl lg:text-lg sm:text-sm text-white '>Track your history progress and set personal goal</h1>
+          </div>
+          <div className='mt-2'>
+            <button className='2xl:text-sm w-[30%] text-[10px] bg-myGreen px-2 py-2 rounded-lg'>Signup here</button>
+          </div>
+          </div>
 
-        <div className='flex mx-auto max-w-[630px]'>
-            <img src={hero3} alt="Image-3" className='my-9 rounded-lg h-[40rem]'/>
+        <div className='w-[100%]'>
+        <img src={hero3} alt="absolute" />
         </div>
+      </div>
     </div>
+    
   )
 }
 

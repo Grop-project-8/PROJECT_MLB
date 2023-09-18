@@ -1,6 +1,7 @@
 import Hero from "../../components/Hero/Hero"
-import Discription from "../../components/Hero/Discription"
+import Discription from "../../Components/Hero/Discription"
 import HomeSignup from "../../Components/Hero/HomeSignup"
+import Login from "../../Components/Login/Login"
 
 function HomePage() {
   return (
@@ -12,4 +13,5 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default HomePage;
+ 
