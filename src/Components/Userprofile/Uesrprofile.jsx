@@ -1,14 +1,10 @@
 
 const Uesrprofile = () => {
+
   return (
     <div> 
-      Tong
-
+      
     </div>
-
-
-
-   
   );
 };
 
