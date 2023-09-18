@@ -3,6 +3,7 @@ import logo from "../../assets/logo/logo.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import {Link} from 'react-router-dom'
 const Navbar = () => {
+  
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" mt-5 flex justify-between mb-5">
+    <div className=" mt-5 flex justify-between mb-5 ">
       {/* logo */}
       <div className="lg:w-[20%] md:w-[25%] md:block  hidden">
         <Link to="/">
@@ -19,7 +20,7 @@ const Navbar = () => {
       </div>
 
       {/* toglle menu mobile   */}
-      <div className=" md:hidden flex items-center pl-5">
+      <div className=" md:hidden ">
         <button className="p-2 " onClick={toggleMenu}>
           {showMenu ? (
             ''
