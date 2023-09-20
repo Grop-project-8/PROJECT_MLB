@@ -34,7 +34,6 @@ function Login() {
         <div id='right-page' className='hidden md:block w-[100%] border border-red-800'>
             <img src={hero2} alt="login-image" className='h-[100%] object-cover' />
         </div>
-
     </div>
   )
 }

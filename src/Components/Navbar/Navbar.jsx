@@ -46,13 +46,13 @@ const Navbar = () => {
         className='my-auto hidden md:block'
       >
         <ul className="flex space-x-4  ">
-          <li className=" 2xl:text-sm text-xs">
+          <li className="2xl:text-sm text-xs">
             <Link  to="/">Home</Link>
           </li>
-          <li className=" 2xl:text-sm text-xs">
+          <li className="2xl:text-sm text-xs">
             <Link to="/">Activity</Link>
           </li>
-          <li>
+          <li className="2xl:text-sm text-xs">
             <a href="">Article</a>
           </li>
           <li className=" 2xl:text-sm text-xs">
