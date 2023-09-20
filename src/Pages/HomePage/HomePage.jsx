@@ -1,7 +1,7 @@
 import Hero from "../../components/Hero/Hero"
 import Discription from "../../Components/Hero/Discription"
 import HomeSignup from "../../Components/Hero/HomeSignup"
-import Login from "../../Components/Login/Login"
+import Activity from "../../Components/Avtivities/Activity";
 
 function HomePage() {
   return (
@@ -9,6 +9,7 @@ function HomePage() {
     <Hero/>
     <Discription/>
     <HomeSignup/>
+    <Activity />
     </>
   )
 }
