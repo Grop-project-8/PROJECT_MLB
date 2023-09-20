@@ -7,12 +7,11 @@ function Hero() {
         <img
           src={hero}
           alt="Image-hero"
-          className="object-cover 
- w-[100%] h-full object-top "
+          className="object-cover w-[100%] h-full object-top md:w-full "
         />
       </div>
 
-      <div className="xl:container mx-auto mb-6 px-10">
+      <div className="xl:container md:container mx-auto mb-6 px-10">
         <div className="lg:absolute top-[40%] right-[5%]  lg:w-[40%]">
           <div className=" space-y-4 my-5 ">
 
@@ -28,7 +27,7 @@ function Hero() {
           <div className="flex justify-center">
             <button
               type="button"
-              className="bg-myGreen px-2 py-4 rounded-[12px] w-1/3 2xl:text-sm text-xs bg-myGreen   "
+              className="bg-myGreen px-2 py-4 rounded-[12px] w-2/3 2xl:text-sm text-xs "
             >
               Try Workout
             </button>

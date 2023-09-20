@@ -1,15 +1,17 @@
-import Hero from "../../Components/Hero/Hero";
-import Discription from "../../components/Hero/Discription";
+import Hero from "../../components/Hero/Hero"
+import Discription from "../../Components/Hero/Discription"
+import HomeSignup from "../../Components/Hero/HomeSignup"
 import Activity from "../../Components/Avtivities/Activity";
 
 function HomePage() {
   return (
-    <div>
-      <Hero />
-      <Discription />
-      <Activity />
-    </div>
-  );
+    <>
+    <Hero/>
+    <Discription/>
+    <HomeSignup/>
+    <Activity />
+    </>
+  )
 }
 
 export default HomePage;
