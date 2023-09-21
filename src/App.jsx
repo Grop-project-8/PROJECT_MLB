@@ -1,6 +1,6 @@
 import Uesrprofile from './Components/Userprofile/Uesrprofile'
 
-import HomePage from './Pages/HomePage/HomePage'
+// import HomePage from './Pages/HomePage/HomePage'
 
 function App() {
 

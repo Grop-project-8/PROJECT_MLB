@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className=" mt-5 flex justify-between mb-5 ">
       {/* logo */}
-      <div className="lg:w-[20%] md:w-[25%] md:block  hidden">
+      <div className="2xl:w-[15%] lg:w-[20%] md:w-[25%] w-[50%] md:block  hidden">
         <Link to="/">
           <img className="w-[100%]" src={logo} alt="logo" />
         </Link>
