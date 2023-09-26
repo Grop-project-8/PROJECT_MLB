@@ -7,10 +7,10 @@ import DiaryCard from "../../Components/Diary/DiaryCard";
 function HomePage() {
   return (
     <>
-    <Hero/>
+    {/* <Hero/>
     <Discription/>
     <HomeSignup/>
-    <Activity />
+    <Activity /> */}
     <DiaryCard />
     </>
   )
