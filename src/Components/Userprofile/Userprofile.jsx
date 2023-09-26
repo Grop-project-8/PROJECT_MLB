@@ -6,16 +6,16 @@ import Recent from "./Recent/Recent";
 import Continued from "./Continued/Continued";
 import Browser from "./Browser/Browser";
 
-const Uesrprofile = () => {
+const Userprofile = () => {
 
-  const [showDashboard, setShowDashboard] = useState(true);
+  const [showDashboard, setShowDashboard] = useState(false);
 
   const toggleDashboard = () => {
     setShowDashboard(!showDashboard);
   };
 
   return (
-    <div className="container">
+    <div className="container mx-auto px-4">
 
       <Userinfo toggleDashboard={toggleDashboard} />
 
@@ -396,4 +396,4 @@ const Uesrprofile = () => {
   );
 };
 
-export default Uesrprofile;
+export default Userprofile;

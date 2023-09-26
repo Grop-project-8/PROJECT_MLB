@@ -1,4 +1,4 @@
-import Uesrprofile from './Components/Userprofile/Uesrprofile'
+import Userprofile from './Components/Userprofile/Userprofile'
 
 // import HomePage from './Pages/HomePage/HomePage'
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     {/* <HomePage/> */}
-    <Uesrprofile/>
+    <Userprofile/>
     </>
   )
 }

@@ -11,16 +11,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" mt-5 flex justify-between mb-5 ">
+    <div className="mt-5 flex justify-between items-center mb-5 px-20">
       {/* logo */}
-      <div className="2xl:w-[15%] lg:w-[20%] md:w-[25%] w-[50%] md:block  hidden">
+      <div className=" w-[25%]  lg:block hidden">
         <Link to="/">
           <img className="w-[100%]" src={logo} alt="logo" />
         </Link>
       </div>
 
       {/* toglle menu mobile   */}
-      <div className=" md:hidden ">
+      <div className=" lg:hidden ">
         <button className="p-2 " onClick={toggleMenu}>
           {showMenu ? (
             ''
@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
       {showMenu && (
-        <div className=" md:hidden flex flex-col space-y-4 absolute top-[2%] left-5 bg-white p-4 shadow-md rounded-lg z-50">
+        <div className=" flex flex-col space-y-4 absolute top-[2%] left-5 bg-white p-4 shadow-md rounded-lg z-50">
           <AiOutlineClose onClick={toggleMenu} /> 
           <a href="" className=" 2xl:text-sm text-xs">Home</a>
           <a href="" className=" 2xl:text-sm text-xs">Activity</a>
@@ -43,7 +43,7 @@ const Navbar = () => {
 
       {/* Desktop */}
       <div
-        className='my-auto hidden md:block'
+        className='my-auto hidden lg:block'
       >
         <ul className="flex space-x-4  ">
           <li className="2xl:text-sm text-xs">

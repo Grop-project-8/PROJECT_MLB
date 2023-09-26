@@ -8,14 +8,14 @@ const Userinfo = ({toggleDashboard}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div>
-      <div className="md:flex w-[100%] ">
-        <div className="rounded-full overflow-hidden w-full md:w-[20%]  ">
+    <div className="">
+      <div className="md:flex w-[100%] flex ">
+        <div className="rounded-full overflow-hidden w-[40%] md:w-[20%] ">
           <img className="w-[100%]" src={hero} alt="img_user" />
         </div>
         <div className="my-auto mx-[20px] ">
           <div className="">
-            <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">
+            <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm ">
               user_name
             </h2>
             <button className="2xl:text-sm text-xs rounded-[12px] ">
@@ -24,8 +24,8 @@ const Userinfo = ({toggleDashboard}) => {
           </div>
 
           {/*  day of week desktop*/}
-          <div className="flex  space-x-2  ">
-            <div className="sm:flex justify-center space-x-5 mt-4 w-full hidden">
+          <div className="flex  space-x-2   ">
+            <div className="md:flex justify-center space-x-5 mt-4 hidden">
               {["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"].map((day, index) => (
                 <div
                   key={index}
@@ -39,19 +39,7 @@ const Userinfo = ({toggleDashboard}) => {
             </div>
           </div>
 
-          {/* day of week mobile */}
-          <div className="flex sm:hidden justify-center space-x-5 mt-4 w-full ">
-            {["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"].map((day, index) => (
-              <div
-                key={index}
-                className={`w-6 h-6 p-4 ${
-                  isLoggedIn ? "bg-myGreen" : "bg-blue"
-                } rounded-full flex items-center justify-center`}
-              >
-                {day}
-              </div>
-            ))}
-          </div>
+         
 
           <button className="" onClick={() => setIsLoggedIn(!isLoggedIn)}>
             {isLoggedIn ? "ออกจากระบบ" : "ล็อกอิน"}
@@ -65,6 +53,19 @@ const Userinfo = ({toggleDashboard}) => {
           </button>
         </div>
       </div>
+       {/* day of week mobile */}
+       <div className="flex md:hidden justify-center space-x-5 mt-4 w-full ">
+            {["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"].map((day, index) => (
+              <div
+                key={index}
+                className={`w-6 h-6 p-4 ${
+                  isLoggedIn ? "bg-myGreen" : "bg-blue"
+                } rounded-full flex items-center justify-center`}
+              >
+                {day}
+              </div>
+            ))}
+          </div>
     </div>
   );
 };
