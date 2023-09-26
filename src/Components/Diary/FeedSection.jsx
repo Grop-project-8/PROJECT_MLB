@@ -7,8 +7,8 @@ const FeedSection = () => {
             <div class='max-w-[300px] flex'>
                 <img
                 class='h-12 w-18 rounded-full' 
-                src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png"
-                alt="User 1"
+                src='https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png'
+                alt='User 1'
                 />
                 <div className='mx-2'>
                     <h3 className='font-bold'>かわいい猫</h3>
@@ -21,7 +21,6 @@ const FeedSection = () => {
             </div>
             <p>Yoga</p>
             <p>I will eat icecream twice after exercise! 🎉</p>
-            
             </div>
         </div>
     );
