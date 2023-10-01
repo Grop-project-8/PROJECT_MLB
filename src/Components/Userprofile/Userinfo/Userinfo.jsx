@@ -16,7 +16,7 @@ const Userinfo = ({toggleDashboard}) => {
         <div className="my-auto mx-[20px] ">
           <div className="">
             <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm ">
-              user_name
+              name
             </h2>
             <button className="2xl:text-sm text-xs rounded-[12px] ">
               Set Goal

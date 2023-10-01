@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { currentUser } from "../Function/auth";
+import Cookies from "js-cookie";
+
+
 
 const Dashboard = () => {
+
+
   // const mockLoginData = [
   //   '2023-09-15',
   //   '2023-09-16',
@@ -27,6 +33,7 @@ const Dashboard = () => {
     const loginDay = loginData.some(
       (dateItem) => formatDate(dateItem) === localISOString
     );
+
     const isPastDate = date < new Date();
 
     let className = "bg-gray-300 text-black";

@@ -1,11 +1,11 @@
 import Userprofile from './Components/Userprofile/Userprofile'
-// import HomePage from './Pages/HomePage/HomePage'
+import HomePage from './Pages/HomePage/HomePage'
 function App() {
 
   return (
     <>
-    {/* <HomePage/> */}
-    <Userprofile/>
+    <HomePage/>
+    {/* <Userprofile/> */}
     </>
   )
 }

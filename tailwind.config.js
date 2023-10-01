@@ -5,7 +5,7 @@ export default {
     extend: {
       fontSize: {
         xs: "1.15rem",
-        sm: "1.75rem",
+        sm: "1.5rem",
         md: "2rem",
         lg: "2.25rem",
         xl: "2.5rem",
