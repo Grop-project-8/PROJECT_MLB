@@ -1,13 +1,14 @@
-import React from "react";
+import {React,useContext} from "react";
 import LoadingToRedirect from "./Loading";
-import Cookies from "js-cookie"; 
+import {ContextProvider} from '../Function/useContext'
 
 const UserRoute = ({ children }) => {
 
-  const userToken = Cookies.get("token"); 
-  console.log(userToken)
+
+  const { isLoggedIn  } = useContext(ContextProvider);
+
   
-  if (!userToken) {
+  if (!isLoggedIn) {
     return <LoadingToRedirect />;
   }
 

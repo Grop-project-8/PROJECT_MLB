@@ -4,7 +4,7 @@ import { login } from "../Function/auth";
 import { useState,useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-// import Cookies from "js-cookie"; 
+import cookies from "js-cookie"; 
 import {ContextProvider } from '../Function/useContext'
 
 
@@ -42,9 +42,11 @@ function Login() {
     login(value)
       .then((res) => {
         if (res && res.data && res.data.payload && res.data.payload.user) {
+          console.log(res.data.payload)
           toast.success(res.data.payload.user.username + " Login Success");
-          // Cookies.set("token", res.data.token, { expires: 3600 });
+          // cookies.set("token", res.data.token, { expires: 3600 });
           roleRedirect(res.data.payload.role);
+          // setUsername(res.data.payload.user.username)
         } else {
           console.log("Invalid response format:", res.data);
         }

@@ -11,6 +11,7 @@ import Login from "./Components/Login/Login.jsx";
 import Userprofile from "./Components/Userprofile/Userprofile.jsx";
 import UserRoute from "./Components/Routes/userRoute.jsx";
 import { CartContextProvider } from "./Components/Function/useContext.jsx";
+import DiaryCary from './Components/Diary/DiaryCard.jsx'
 // import UserRoute from "./Components/Routes/userRoute.jsx";
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
         <Userprofile />
       </UserRoute>
     ),
+  },
+  {
+    path: "/DiaryCary",
+    element: <DiaryCary/>
   },
   {
     path: "/sign",

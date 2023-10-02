@@ -3,7 +3,7 @@ import hero from "../../assets/hero/hero.svg";
 function Hero() {
   return (
     <div className="relative">
-      <div className="w-[100%] sm:h-[40rem] md:h-[60rem]">
+      <div className="w-[100%] sm:h-[40rem] md:h-[60rem] ">
         <img
           src={hero}
           alt="Image-hero"
@@ -19,7 +19,7 @@ function Hero() {
               Transform Your Health Qucik Workouts for Busy Lives
             </h1>
 
-            <p className="text-myGray font-poppins  2xl:text-sm text-xs">
+            <p className="text-myGray font-poppins  2xl:text-sm text-xs ">
               Defeat Office Syndrome with Move-Life Balance!
             </p>
           </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useContext,useEffect } from "react";
 import logo from "../../assets/logo/logo.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -6,24 +6,44 @@ import Cookies from "js-cookie";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Space } from "antd";
 import { useNavigate } from "react-router-dom";
-
+import { ContextProvider } from '../Function/useContext'
+import { checkId,logOut} from '../Function/auth'
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navigate = useNavigate();
 
+  const { isLoggedIn ,setIsLoggedIn } = useContext(ContextProvider);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const idData = await checkId();
+        console.log('ID Data:', idData);
+        setIsLoggedIn(idData.data.isLoggedIn);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, [setIsLoggedIn]);
+  
+  
+
+  const handleLogout = async () => {
+    try {
+      const logout = await logOut();
+      toast('Log out')
+      setIsLoggedIn(logout.data.isLoggedIn)
+    } catch (err) {
+      console.error('Error logging out:', err);
+    }
+  }
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
-
-  function handleLogout() {
-    Cookies.remove('token');
-    navigate("/");
-  }
-
-  const token = Cookies.get("token");
-  const isLoggedIn = token;
 
   return (
     <div className="mt-5 flex justify-between items-center mb-5 px-20">
@@ -80,7 +100,7 @@ const Navbar = () => {
 
       <div className="flex ml-10 px-2">
         <ul className="flex my-auto space-x-4 items-center">
-          {token ? (
+          {isLoggedIn ? (
             <div className="space-x-4 ">
               <Space wrap size={16}>
                 <Link to="/profile">
