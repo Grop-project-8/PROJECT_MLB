@@ -44,14 +44,14 @@ const Navbar = () => {
       <div
         className='my-auto hidden md:block'
       >
-        <ul className="flex space-x-4  ">
+        <ul className="flex space-x-10  ">
           <li className=" 2xl:text-sm text-xs">
             <Link  to="/">Home</Link>
           </li>
           <li className=" 2xl:text-sm text-xs">
             <Link to="/">Activity</Link>
           </li>
-          <li>
+          <li className=" 2xl:text-sm text-xs">
             <a href="">Article</a>
           </li>
           <li className=" 2xl:text-sm text-xs">
@@ -63,10 +63,10 @@ const Navbar = () => {
       <div className="flex ml-10 px-2">
         <ul className="flex my-auto space-x-4 items-center">
           <li className=" 2xl:text-sm text-xs">
-            <Link to="/">Login</Link>
+            <Link to="/login">Login</Link>
           </li>
           <li className="2xl:text-sm text-xs bg-myGreen px-2 py-2 rounded-[12px] w-[100%]">
-            <Link to="/" >
+            <Link to="/sign" >
                 Sign up 
             </Link>
           </li>

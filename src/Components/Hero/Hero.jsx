@@ -2,7 +2,7 @@ import hero from "../../assets/hero/hero.svg";
 
 function Hero() {
   return (
-    <div className="relative">
+    <div className="relativemd:container">
       <div className="w-[100%] sm:h-[40rem] md:h-[60rem]">
         <img
           src={hero}
@@ -11,7 +11,7 @@ function Hero() {
         />
       </div>
 
-      <div className="xl:container md:container mx-auto mb-6 px-10">
+      <div className=" mx-auto mb-6 px-10"> {/* xl:container md:container */}
         <div className="lg:absolute top-[40%] right-[5%]  lg:w-[40%]">
           <div className=" space-y-4 my-5 ">
 
