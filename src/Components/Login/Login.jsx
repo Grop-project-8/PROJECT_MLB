@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import logo from '../../assets/login/login-logo.svg'
-import hero from '../../assets/hero/hero.svg'
-=======
 import logo from "../../assets/login/login-logo.svg";
 import hero from "../../assets/hero/hero.svg";
 import { login } from "../../Function/auth";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
->>>>>>> aca0ecabcde27a6d6cd55b2060370386211432ad
 
 function Login() {
   const navigate = useNavigate();
