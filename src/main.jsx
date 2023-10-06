@@ -10,8 +10,8 @@ import Layout from "./Components/Layout/Layout.jsx";
 import Login from "./Components/Login/Login.jsx";
 import Userprofile from "./Components/Userprofile/Userprofile.jsx";
 import UserRoute from "./Components/Routes/userRoute.jsx";
-import { CartContextProvider } from "./Components/Function/useContext.jsx";
-import DiaryCary from './Components/Diary/DiaryCard.jsx'
+import { CartContextProvider } from "./Function/useContext.jsx";
+import DiaryCary from "./Components/Diary/DiaryCard.jsx";
 // import UserRoute from "./Components/Routes/userRoute.jsx";
 
 const router = createBrowserRouter([
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/DiaryCary",
-    element: <DiaryCary/>
+    element: <DiaryCary />,
   },
   {
     path: "/sign",

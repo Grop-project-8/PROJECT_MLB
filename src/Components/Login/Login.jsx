@@ -1,17 +1,13 @@
 import logo from "../../assets/login/login-logo.svg";
 import hero2 from "../../assets/hero/hero2.svg";
-import { login } from "../Function/auth";
-import { useState,useContext} from "react";
+import { login } from "../../Function/auth";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import cookies from "js-cookie"; 
-import {ContextProvider } from '../Function/useContext'
-
+import { ContextProvider } from "../../Function/useContext";
 
 function Login() {
-
   const navigate = useNavigate();
-  const { setUsername } = useContext(ContextProvider);
 
   const [value, setValue] = useState({
     username: "",
@@ -34,15 +30,13 @@ function Login() {
       navigate("/");
     }
   };
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     login(value)
       .then((res) => {
         if (res && res.data && res.data.payload && res.data.payload.user) {
-          console.log(res.data.payload)
+          console.log(res.data.payload);
           toast.success(res.data.payload.user.username + " Login Success");
           // cookies.set("token", res.data.token, { expires: 3600 });
           roleRedirect(res.data.payload.role);

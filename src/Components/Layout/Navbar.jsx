@@ -2,12 +2,10 @@ import { useState,useContext,useEffect } from "react";
 import logo from "../../assets/logo/logo.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Space } from "antd";
-import { useNavigate } from "react-router-dom";
-import { ContextProvider } from '../Function/useContext'
-import { checkId,logOut} from '../Function/auth'
+import { ContextProvider } from '../../Function/useContext'
+import { checkId,logOut} from '../../Function/auth'
 import { toast } from "react-toastify";
 
 const Navbar = () => {
@@ -25,12 +23,10 @@ const Navbar = () => {
         console.error('Error:', error);
       }
     };
-
     fetchData();
   }, [setIsLoggedIn]);
   
   
-
   const handleLogout = async () => {
     try {
       const logout = await logOut();

@@ -5,8 +5,7 @@ export const ContextProvider = createContext({});
 
 export const CartContextProvider = ({ children }) => {
   
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
     <ContextProvider.Provider value={{ isLoggedIn, setIsLoggedIn }}>

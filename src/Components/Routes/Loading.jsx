@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Spin } from "antd";
 
 const LoadingToRedirect = () => {
-    const [ count, setCount ] = useState(3)
-    const navigate = useNavigate()
+  const [count, setCount] = useState(3);
+  const navigate = useNavigate();
 
-    useEffect(()=>{
-        const interval = setInterval(()=>{
-            setCount((currentCount)=> --currentCount)
-        },1000)
-        // Redirect
-        count === 0 && navigate('/')
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((currentCount) => --currentCount);
+    }, 1000);
 
-        return () => clearInterval(interval)
+    count === 0 && navigate("/");
+    return () => clearInterval(interval);
+  }, [count]);
 
-    },[count])
-
-  return <div>
-      <h1>No Permission, redirect in {count}</h1>
-      
-      </div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <Spin size="large" />
+    </div>
+  );
 };
 
 export default LoadingToRedirect;

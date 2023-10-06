@@ -8,17 +8,15 @@ export const login = async (value) =>
     withCredentials: true,
   });
 
-  export const checkId = async (value) =>
-  await axios.post("http://localhost:8000/checkId", value, {
+export const checkId = async (value) =>
+  await axios.post("http://localhost:8000/checkId",value,{
     withCredentials: true,
   });
 
-  
-  export const logOut = async (value) =>
+export const logOut = async (value) =>
   await axios.post("http://localhost:8000/logout",value,{
     withCredentials: true,
   });
-
 
 
 // export const login = async (value) => {
@@ -33,7 +31,18 @@ export const login = async (value) =>
 // };
 
 export const currentUser = async () => {
-  return await axios.get("http://localhost:8000/currentuser", {
-    withCredentials: true,
-  });
+  try {
+    const res = await axios.get("http://localhost:8000/currentUser", {
+      withCredentials: true, 
+      params: {
+        _t: new Date().getTime(),
+      },
+    });
+    return res;
+  } catch (err) {
+    throw err;
+  }
 };
+
+
+
