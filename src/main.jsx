@@ -12,7 +12,7 @@ import Userprofile from "./Components/Userprofile/Userprofile.jsx";
 import UserRoute from "./Components/Routes/userRoute.jsx";
 import { CartContextProvider } from "./Function/useContext.jsx";
 import DiaryCary from "./Components/Diary/DiaryCard.jsx";
-// import UserRoute from "./Components/Routes/userRoute.jsx";
+import Register from "./Components/Register/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign",
-    element: <App />,
+    element: <Register />,
   },
 ]);
 
