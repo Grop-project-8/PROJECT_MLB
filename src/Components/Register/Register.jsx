@@ -6,7 +6,7 @@ function Register() {
   return (
     <div className='lg:container lg:flex'>
         {/* form mobile */}
-        <div className='flex flex-col items-center justify-center border border-red-800 h-screen relative'>
+        <div className='flex flex-col items-center justify-center h-screen relative'>
             <img src={logo} alt="register-logo" className='w-[20rem] absolut top-5 '/>
             <h1 className='2xl:text-2xl xl:text-xl lg:text-lg text-sm'>Register</h1>
             
