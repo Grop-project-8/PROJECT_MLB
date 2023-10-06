@@ -18,7 +18,6 @@ function Register() {
                 <input type="number" placeholder='weight' className='w-[40%] p-3 border rounded-lg'/>
                 <input type="number" placeholder='height' className='w-[40%] p-3 border rounded-lg'/>
                 </div>
-                <input type="date" placeholder='birth date' className=' border p-3 rounded-lg'/>
                 <label className='text-center'>
                 <input type="checkbox" id='myCheckbox' placeholder='checkbox' className=' border p-3 rounded-lg'/>
                 <span className='text-[13px] pl-2 font-light'>accept term of use condition</span>
