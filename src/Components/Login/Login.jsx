@@ -1,4 +1,3 @@
-
 import logo from '../../assets/login/login-logo.svg'
 import hero from '../../assets/hero/hero.svg'
 
