@@ -1,6 +1,6 @@
 import hero from "../../assets/hero/hero.svg";
 
-function Heros() {
+function Home() {
 
   return (
 
@@ -41,4 +41,4 @@ function Heros() {
   );
 }
 
-export default Heros;
+export default Home;

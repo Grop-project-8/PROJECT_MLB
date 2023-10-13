@@ -2,12 +2,12 @@ import Discription from "../../Components/Hero/Discription"
 import HomeSignup from "../../Components/Hero/HomeSignup"
 import Activity from "../../Components/Avtivities/Activity";
 
-// import Heros from "../../components/Hero/Heros.jsx";
+import Home from "../../Components/Hero/Home";
 
 function HomePage() {
   return (
     <>
-    {/* <Heros/> */}
+    <Home/>
     <Discription/>
     <HomeSignup/>
     <Activity />
