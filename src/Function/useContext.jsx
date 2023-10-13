@@ -1,10 +1,11 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState,  } from "react";
 import { currentUser } from "./auth";
+
 
 export const ContextProvider = createContext({});
 
 export const CartContextProvider = ({ children }) => {
-  
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
@@ -13,3 +14,4 @@ export const CartContextProvider = ({ children }) => {
     </ContextProvider.Provider>
   );
 };
+
