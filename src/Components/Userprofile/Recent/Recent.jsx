@@ -5,17 +5,17 @@ const Recent = () => {
   const videos = [
     {
       id: 1,
-      url: "https://www.youtube.com/watch?v=YLTnhWAG3hY",
+      url: "",
       name: "vdo name 1",
     },
     {
       id: 2,
-      url: "https://www.youtube.com/watch?v=AnotherVideoID",
+      url: "",
       name: "vdo name 2",
     },
     {
       id: 3,
-      url: "https://www.youtube.com/watch?v=AnotherVideoID",
+      url: "",
       name: "vdo name 3",
     },
     
