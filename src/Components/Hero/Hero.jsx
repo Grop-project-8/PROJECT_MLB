@@ -1,7 +1,9 @@
 import hero from "../../assets/hero/hero.svg";
 
 function Hero() {
+
   return (
+
     <div className="relative md:container  ">
       <div className="w-[100%] sm:h-[40rem] md:h-[60rem]">
         <img
@@ -35,6 +37,7 @@ function Hero() {
         </div>
       </div>
     </div>
+    
   );
 }
 

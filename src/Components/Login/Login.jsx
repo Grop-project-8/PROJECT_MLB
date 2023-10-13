@@ -39,7 +39,6 @@ function Login() {
           toast.success(res.data.payload.user.username + " Login Success");
           // cookies.set("token", res.data.token, { expires: 3600 });
           roleRedirect(res.data.payload.role);
-          // setUsername(res.data.payload.user.username)
         } else {
           console.log("Invalid response format:", res.data);
         }
@@ -81,6 +80,7 @@ function Login() {
             <div className="flex  border-2 py-2 px-3 rounded-2xl mb-4">
               <input
                  type="password"
+                 placeholder="password"
                  name="password"
                  onChange={handleChange}
                 className="pl-2 outline-none border-none"
