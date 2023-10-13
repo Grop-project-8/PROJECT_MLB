@@ -50,14 +50,15 @@ function Login() {
   };
 
   return (
-    <div className="lg:container flex justify-between md:justify-center border  m-auto h-screen">
+    <div className="lg:container flex justify-between md:justify-center h-screen">
+      
       <div
         id="left-page"
         className="flex flex-col justify-center text-center items-center w-[100%]"
       >
         {/* logo */}
         <div id="logo" className="flex justify-center">
-          <img src={logo} alt="login-logo" className="w-[80%]" />
+          <img src={logo} alt="login-logo" className="w-[75%]" />
         </div>
 
         <div>
@@ -66,8 +67,8 @@ function Login() {
 
         {/* input */}
         <form onSubmit={handleSubmit}>
-          <div className="w-[20rem]">
-            <div className="flex  border-2 py-2 px-3 rounded-2xl mb-4">
+          <div className="w-[100%]">
+            <div className="flex border-2 py-2 px-3 rounded-2xl mb-4">
               <input
                 type="text"
                 placeholder="username"
@@ -86,7 +87,7 @@ function Login() {
             </div>
           </div>
 
-          <p className="text-gray-500">forget password</p>
+          <p className="text-gray-500 text-left">forget password</p>
 
           <button className="2xl:text-sm text-xs bg-myGreen px-2 py-2 mt-4 rounded-[12px] w-[40%] ">
             Login
