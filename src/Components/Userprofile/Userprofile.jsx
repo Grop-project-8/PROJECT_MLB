@@ -2,7 +2,7 @@
 import { useState,useEffect, } from "react";
 import Dashboard from "../Dashboard/Dashboard";
 import Userinfo from "./Userinfo/Userinfo";
-import Recent from "./Recent/Recent";
+// import Recent from "./Recent/Recent";
 import Continued from "./Continued/Continued";
 import Browser from "./Browser/Browser";
 import InitialValue from './InitialValue/InitialValue'
@@ -28,7 +28,7 @@ const Userprofile = () => {
       ) : (
 
         <>
-          <Recent />
+          {/* <Recent /> */}
           <div>
             <Continued />
             <Browser />
