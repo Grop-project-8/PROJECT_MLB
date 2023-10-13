@@ -1,12 +1,13 @@
 import Discription from "../../Components/Hero/Discription"
 import HomeSignup from "../../Components/Hero/HomeSignup"
 import Activity from "../../Components/Avtivities/Activity";
-import Hero from "../../components/Hero/Hero";
+
+import Heros from "../../components/Hero/Heros";
 
 function HomePage() {
   return (
     <>
-    <Hero/>
+    <Heros/>
     <Discription/>
     <HomeSignup/>
     <Activity />
