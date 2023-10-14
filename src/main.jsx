@@ -12,6 +12,7 @@ import Userprofile from "./Components/Userprofile/Userprofile.jsx";
 import UserRoute from "./Components/Routes/userRoute.jsx";
 import { CartContextProvider } from "./Function/useContext.jsx";
 import DiaryCary from "./Components/Diary/DiaryCard.jsx";
+import EditForm from './Components/Userprofile/Userform/Userform.jsx'
 import Register from "./Components/Register/Register.jsx";
 
 const router = createBrowserRouter([
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
     path: "/sign",
     element: <Register />,
   },
+  {
+    path:"/form",
+    element:<EditForm/>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

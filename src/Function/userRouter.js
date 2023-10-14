@@ -11,3 +11,26 @@ export const getuser = async () => {
       throw err;
     }
   };
+
+  export const updatePassword = async (value) => {
+    try {
+      const res = await axios.put("http://localhost:8000/updatePassword", value, {
+        withCredentials: true,
+      });
+      return res;
+    } catch (err) {
+      throw err;
+    }
+  };
+  
+
+  export const updateProfile = async (value) => {
+    try {
+      const res = await axios.put("http://localhost:8000/updateProfile", value, {
+        withCredentials: true,
+      });
+      return res;
+    } catch (err) {
+      throw err;
+    }
+  };
