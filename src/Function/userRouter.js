@@ -34,3 +34,27 @@ export const getuser = async () => {
       throw err;
     }
   };
+
+  export const sendOTP = async (value) => {
+    try {
+      const response = await axios.post("http://localhost:8000/sendOTP", value, {
+        withCredentials: true,
+      });
+      return response.data; 
+    } catch (error) {
+      throw(err);
+    }
+  };
+  
+  
+  export const rePass = async (value) => {
+    try {
+      const response = await axios.post("http://localhost:8000/rePass", value, {
+        withCredentials: true,
+      });
+      return response.data; 
+    } catch (error) {
+      throw(err);
+    }
+  };
+  

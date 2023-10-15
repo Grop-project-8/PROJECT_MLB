@@ -1,13 +1,18 @@
 import logo_horizon from "../../assets/logo_circle/logo_horizon.svg";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { GrFormPrevious } from "react-icons/gr";
 
 export default function Forgot_password_mobile() {
+
+  const goBack = () => {
+    window.history.back();
+  }
+  
   return (
     <>
       <div className="grid justify-center sm-max  md:disabled: gap-4">
         <div className="relative">
           <img src={logo_horizon} className="w-[266px] h-[67px] " alt="" />
-          <AiOutlineArrowLeft className="absolute inline-block  top-0 left-0 bg-white h-[67px]" />
+          <GrFormPrevious className="absolute inline-block  top-0 left-0 bg-white h-[67px]" onClick={goBack} />
         </div>
 
         <div className="grid  mx-[auto] gap-2">

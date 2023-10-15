@@ -38,7 +38,6 @@ const EditForm = ({ Editform,data }) => {
         console.error('Error occurred while updating data', error);
         toast.error('Failed to update data');
       }
-     
     }
   };
   
