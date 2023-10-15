@@ -69,7 +69,7 @@ const router = createBrowserRouter([
   {
     path:"/repass",
     element:<Resetpass/>
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

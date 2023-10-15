@@ -17,7 +17,6 @@ const Navbar = () => {
     const fetchData = async () => {
       try {
         const idData = await checkId();
-        console.log('ID Data:', idData);
         setIsLoggedIn(idData.data.isLoggedIn);
       } catch (error) {
         console.error('Error:', error);

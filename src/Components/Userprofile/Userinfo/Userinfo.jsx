@@ -2,10 +2,13 @@ import { useState } from "react";
 import hero from "../../../assets/hero/hero.svg";
 import InitialValue from "../InitialValue/InitialValue";
 import EditForm from "../Userform/Userform";
+import { createImage } from '../../../Function/userRouter'
+import Upload from "../../../Upload";
 
 const Userinfo = ({ userData,toggleDashboard }) => {
 
   const [showEditform, setShowEditform] = useState(false);
+  const [image, setImage] = useState([]);
 
   if (!userData) {
     return <div>Loading...</div>;
@@ -28,14 +31,31 @@ const Userinfo = ({ userData,toggleDashboard }) => {
     status = 'โรคอ้วนระดับที่ 2';
   }
 
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
+  };
+  
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+      const formData = new FormData();
+      formData.append('image', image);
+      await createImage(formData);
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
+  }
 
 
   return (
     <div className="w-full md:flex ">
       <div className="  mx-auto w-1/2  md:w-1/3 ">
         <div className="rounded-full overflow-hidden  mx-auto  w-[80%]  ">
-          <img className="w-full" src={hero} alt="img_user" />
+          <img className="w-full" src={userData.profileImage} alt="img_user" />
         </div>
+        
+        <Upload/>
+
         <div className="text-center mt-2">
             <button onClick={Editform} >
             Edit Profile

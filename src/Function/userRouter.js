@@ -23,7 +23,6 @@ export const getuser = async () => {
     }
   };
   
-
   export const updateProfile = async (value) => {
     try {
       const res = await axios.put("http://localhost:8000/updateProfile", value, {
@@ -55,6 +54,17 @@ export const getuser = async () => {
       return response.data; 
     } catch (error) {
       throw(err);
+    }
+  };
+  
+  export const createImage = async (value) => {
+    try {
+      const response = await axios.post("http://localhost:8000/createImage", value, {
+        withCredentials: true,
+      });
+      return response.data;
+    } catch (error) {
+      throw error;
     }
   };
   
