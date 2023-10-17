@@ -12,7 +12,10 @@ import Userprofile from "./Components/Userprofile/Userprofile.jsx";
 import UserRoute from "./Components/Routes/userRoute.jsx";
 import { CartContextProvider } from "./Function/useContext.jsx";
 import DiaryCary from "./Components/Diary/DiaryCard.jsx";
+import EditForm from './Components/Userprofile/Userform/Userform.jsx'
 import Register from "./Components/Register/Register.jsx";
+import Forgot_password_mobile from "./Components/login_mobile/Forgot_password_mobile.jsx";
+import Resetpass from "./Components/Resetpass/Resetpass.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +61,14 @@ const router = createBrowserRouter([
   {
     path: "/sign",
     element: <Register />,
+  },
+  {
+    path:"/forgot",
+    element:<Forgot_password_mobile/>
+  },
+  {
+    path:"/repass",
+    element:<Resetpass/>
   },
 ]);
 

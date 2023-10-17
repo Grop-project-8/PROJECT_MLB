@@ -30,6 +30,7 @@ export const logOut = async (value) =>
 //   }
 // };
 
+
 export const currentUser = async () => {
   try {
     const res = await axios.get("http://localhost:8000/currentUser", {

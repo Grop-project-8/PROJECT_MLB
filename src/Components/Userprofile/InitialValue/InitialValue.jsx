@@ -15,9 +15,9 @@ const InitialValue = () => {
   };
 
   return (
-    <div className="md:w-[40%] md:mr-5 mx-auto p-4 sm:p-0 items-center ">
+    <div className="md:w-[100%] md:mr-5 mx-auto p-4 sm:p-0 items-center ">
       <h2>your goal</h2>
-      <div className="w-full  bg-mygray rounded ">
+      <div className="w-full  bg-mygray rounded text-black">
         <div className="h-7 flex items-center ">
           <div className="bg-myGreen h-full rounded " style={tubeStyle}>
             <div className=" text-end w-full mt-1">

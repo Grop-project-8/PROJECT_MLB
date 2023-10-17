@@ -2,11 +2,15 @@ import logo from "../../assets/login/login-logo.svg";
 import hero from "../../assets/hero/hero.svg";
 import { login } from "../../Function/auth";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { GrFormPrevious } from "react-icons/gr";
 
 function Login() {
   const navigate = useNavigate();
+  const goBack = () => {
+    window.history.back();
+  };
 
   const [value, setValue] = useState({
     username: "",
@@ -35,7 +39,6 @@ function Login() {
     login(value)
       .then((res) => {
         if (res && res.data && res.data.payload && res.data.payload.user) {
-          console.log(res.data.payload);
           toast.success(res.data.payload.user.username + " Login Success");
           // cookies.set("token", res.data.token, { expires: 3600 });
           roleRedirect(res.data.payload.role);
@@ -51,7 +54,11 @@ function Login() {
 
   return (
     <div className="lg:container flex justify-between md:justify-center h-screen">
-      
+      <GrFormPrevious
+        onClick={goBack}
+        className="lg:text-[60px] text-[40px] m-4"
+      />
+
       <div
         id="left-page"
         className="flex flex-col justify-center text-center items-center w-[100%]"
@@ -79,17 +86,18 @@ function Login() {
             </div>
             <div className="flex  border-2 py-2 px-3 rounded-2xl mb-4">
               <input
-                 type="password"
-                 placeholder="password"
-                 name="password"
-                 onChange={handleChange}
+                type="password"
+                placeholder="password"
+                name="password"
+                onChange={handleChange}
                 className="pl-2 outline-none border-none"
               />
             </div>
           </div>
 
-          <p className="text-gray-500 text-left">forget password</p>
-
+          <Link to='/repass'>
+            <p className="text-gray-500 text-left">forget password</p>
+          </Link>
           <button className="2xl:text-sm text-xs bg-myGreen px-2 py-2 mt-4 rounded-[12px] w-[40%] ">
             Login
           </button>
@@ -103,7 +111,7 @@ function Login() {
           alt="login-image"
           className="object-cover w-[100%] h-full object-top md:w-full"
         />
-      </div>      
+      </div>
     </div>
   );
 }

@@ -17,7 +17,6 @@ const Navbar = () => {
     const fetchData = async () => {
       try {
         const idData = await checkId();
-        console.log('ID Data:', idData);
         setIsLoggedIn(idData.data.isLoggedIn);
       } catch (error) {
         console.error('Error:', error);
@@ -31,7 +30,6 @@ const Navbar = () => {
     try {
       const logout = await logOut();
       toast('Log out')
-      localStorage.removeItem('payload');
       setIsLoggedIn(logout.data.isLoggedIn)
     } catch (err) {
       console.error('Error logging out:', err);
