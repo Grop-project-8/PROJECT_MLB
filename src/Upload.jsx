@@ -35,7 +35,7 @@ const Upload = () => {
       <label>
         เลือกไฟล์
         <input
-          type="file"
+          type="file" 
           name="file"
           accept="images/*"
           onChange={handleChangeFile}
