@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-export const getuser = async () => {
+  export const getuser = async () => {
     try {
       const res = await axios.get(import.meta.env.VITE_REACT_API_URL+"getUser", {
         withCredentials: true, 

@@ -31,31 +31,15 @@ const Userinfo = ({ userData,toggleDashboard }) => {
     status = 'โรคอ้วนระดับที่ 2';
   }
 
-  const handleImageChange = (e) => {
-    setImage(e.target.files[0]);
-  };
-  
-  const submit = async (e) => {
-    e.preventDefault();
-    try {
-      const formData = new FormData();
-      formData.append('image', image);
-      await createImage(formData);
-    } catch (error) {
-      console.error('Error uploading image:', error);
-    }
-  }
 
 
   return (
     <div className="w-full md:flex ">
       <div className="  mx-auto w-1/2  md:w-1/3 ">
-        <div className="rounded-full overflow-hidden  mx-auto  w-[80%]  ">
-          <img className="w-full" src={userData.profileImage} alt="img_user" />
-        </div>
+       
+        <Upload userData={userData}/>
         
-        <Upload/>
-
+      
         <div className="text-center mt-2">
             <button onClick={Editform} >
             Edit Profile

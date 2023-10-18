@@ -6,6 +6,7 @@ const DiaryCard = () => {
     const [activityType, setActivityType] = useState('--Activity type--')
     const [activityName, setActivityName] = useState('--Activity name--')
     const [actName, setActName] = useState([])
+    
     const changeActType = (even) => {
         setActivityType(even.target.value)
         setActName(activities.find( actT => actT.actType === even.target.value).actName)
@@ -14,6 +15,9 @@ const DiaryCard = () => {
     const changeActName = (even) => {
         setActivityName(even.target.value)
     }
+
+    
+
 
   return (
     <>
@@ -86,7 +90,7 @@ const DiaryCard = () => {
                         
                         <textarea
                         className='m-2 w-full p-2 rounded-lg'
-                        placeholder="What's on your mind?"></textarea>
+                        placeholder="What's on your mind?" name='detail'></textarea>
 
                         <div className='m-2'>
                             <button className='p-2 rounded-2xl hover:text-[#fff565] bg-[#9ffc41]'>Post</button>
