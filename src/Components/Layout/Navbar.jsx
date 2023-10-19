@@ -66,7 +66,7 @@ const Navbar = () => {
           <Link to="/activity" className=" 2xl:text-sm text-xs">
             Activity
           </Link>
-          <Link to="/news" className=" 2xl:text-sm text-xs">
+          <Link to="/vdoall" className=" 2xl:text-sm text-xs">
             Article
           </Link>
           <Link to="/contact" className=" 2xl:text-sm text-xs">
@@ -85,7 +85,7 @@ const Navbar = () => {
             <Link to="/activity">Activity</Link>
           </li>
           <li className="2xl:text-sm text-xs">
-            <Link to="/news">Article</Link>
+            <Link to="/vdoall">Article</Link>
           </li>
           <li className=" 2xl:text-sm text-xs">
             <Link to="/contact">Contact</Link>
