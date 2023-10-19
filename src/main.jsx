@@ -3,24 +3,27 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./Pages/HomePage/HomePage.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import HomePage from "./Pages/HomePage/HomePage.jsx";
 import Layout from "./Components/Layout/Layout.jsx";
 import Login from "./Components/Login/Login.jsx";
-import Yoga from "./Pages/videoGellery/5type/yoga.jsx";
-import Pilates from "./Pages/videoGellery/5type/pilates.jsx";
-import BodyWeight from "./Pages/videoGellery/5type/bodyWeight.jsx";
-import Dance from "./Pages/videoGellery/5type/dance.jsx";
-import JumpingRope from "./Pages/videoGellery/5type/jumpingRope.jsx";
-import FullVideo from "./Pages/videoGellery/FullVideo.jsx";
-// import VideoCard from "./Pages/videoGellery/VideoCard.jsx";
-// import CustomRoute from "./Pages/videoGellery/customroute.jsx";
+import Userprofile from "./Components/Userprofile/Userprofile.jsx";
+import UserRoute from "./Components/Routes/userRoute.jsx";
+import { CartContextProvider } from "./Function/useContext.jsx";
+import DiaryCary from "./Components/Diary/DiaryCard.jsx";
+import EditForm from './Components/Userprofile/Userform/Userform.jsx'
+import Register from "./Components/Register/Register.jsx";
+import Forgot_password_mobile from "./Components/login_mobile/Forgot_password_mobile.jsx";
+import Resetpass from "./Components/Resetpass/Resetpass.jsx";
+import DiaryCard from "./Components/Diary/DiaryCard.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <Layout>
-        <App/>
+        <App />
       </Layout>
     ),
   },
@@ -30,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/activity",
-    element: <App />,
+    element: <DiaryCard />,
   },
   {
     path: "/news",
@@ -45,8 +48,28 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
+    path: "/profile",
+    element: (
+      <UserRoute>
+        <Userprofile />
+      </UserRoute>
+    ),
+  },
+  {
+    path: "/DiaryCary",
+    element: <DiaryCary />,
+  },
+  {
     path: "/sign",
-    element: <App />,
+    element: <Register />,
+  },
+  {
+    path:"/forgot",
+    element:<Forgot_password_mobile/>
+  },
+  {
+    path:"/repass",
+    element:<Resetpass/>
   },
   {
     path: "/yoga",
@@ -97,6 +120,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ToastContainer />
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   </React.StrictMode>
 );
