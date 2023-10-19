@@ -1,44 +1,48 @@
 const vid_list = {
     yoga:[{
+      id:1,
         youtube_embed_link: 'https://www.youtube.com/embed/I5bjG6uRWWg',
         title: 'TONED ARMS WORKOUT - (quick + intense)',
         equipment:'none',
         tumbnail: 'https://i1.ytimg.com/vi/I5bjG6uRWWg/mqdefault.jpg'
       }],
     pilates:[{
+      id:2,
         youtube_embed_link: 'https://www.youtube.com/embed/I5bjG6uRWWg',
         title: 'TONED ARMS WORKOUT - (quick + intense)',
         equipment:'none',
         tumbnail: 'https://i1.ytimg.com/vi/I5bjG6uRWWg/mqdefault.jpg'
       }],
     bodyWeight:[  {
+      id:3,
         youtube_embed_link: 'https://www.youtube.com/embed/I5bjG6uRWWg',
         title: 'TONED ARMS WORKOUT - (quick + intense)',
         equipment:'none',
         tumbnail: 'https://i1.ytimg.com/vi/I5bjG6uRWWg/mqdefault.jpg'
       },
-    //ตัว
       {
+        id:4,
         youtube_embed_link: 'https://www.youtube.com/embed/jKTxe236-4U',
         title: '30 MIN FULL BODY WORKOUT - Apartment &amp; Small Space Friendly (No Equipment, No Jumping)',
         equipment:'none',
         tumbnail_: 'https://i1.ytimg.com/vi/jKTxe236-4U/mqdefault.jpg'
       },
-    //ขา&สะโพก
+ 
      {
+      id:5,
         youtube_embed_link: 'https://www.youtube.com/embed/9hQTvrP6EsM',
         title: 'TONED LEGS &amp; ROUND BOOTY At Home Workout (No Equipment)',
         equipment:'Rubber band',
         tumbnail_: 'https://i1.ytimg.com/vi/9hQTvrP6EsM/mqdefault.jpg'
       },
-    //Back & CORE
+
      {
         youtube_embed_link: 'https://www.youtube.com/embed/aPF7rUv0CZs',
         title: '15 MIN TONED BACK &amp; CORE - No Equipment, No Repeat Exercises, Low Impact Home Workout',
         equipment:'none',
         tumbnail_: 'https://i1.ytimg.com/vi/aPF7rUv0CZs/mqdefault.jpg'
       },
-    //หน้าท้อง
+
      {
         youtube_embed_link: 'https://www.youtube.com/embed/svdPTfOpAyQ',
         title: '10 MIN SIX PACK ABS for TOTAL BEGINNERS (No Equipment)',
