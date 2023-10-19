@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css';
+import { Link } from 'react-router-dom'
 
 
 const Activity = () => {
@@ -28,11 +29,11 @@ const Activity = () => {
                 // onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
               >
-                <SwiperSlide ><img src= {Yoga} alt="Image-yoga" className='rounded-2xl w-[100%]'/></SwiperSlide>
-                <SwiperSlide ><img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl w-[100%]' /></SwiperSlide>
-                <SwiperSlide ><img src= {Dance} alt="Image-Dance" className='rounded-2xl w-[100%]'/></SwiperSlide>
-                <SwiperSlide ><img src= {JumpingRope} alt="Image-JumpingRope" className='rounded-2xl w-[100%]'/></SwiperSlide>
-                <SwiperSlide ><img src= {Pilates} alt="Image-Pilates" className='rounded-2xl w-[100%]'/></SwiperSlide> 
+                <SwiperSlide > <Link to = '/yoga'><img src= {Yoga} alt="Image-yoga" className='rounded-2xl w-[100%]'/></Link></SwiperSlide>
+                <SwiperSlide ><Link to = '/bodyweight'><img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl w-[100%]' /></Link></SwiperSlide>
+                <SwiperSlide ><Link to = '/dance'><img src= {Dance} alt="Image-Dance" className='rounded-2xl w-[100%]'/></Link></SwiperSlide>
+                <SwiperSlide > <Link to = '/jumpingrope'><img src= {JumpingRope} alt="Image-JumpingRope" className='rounded-2xl w-[100%]'/></Link></SwiperSlide>
+                <SwiperSlide > <Link to = '/pilates'><img src= {Pilates} alt="Image-Pilates" className='rounded-2xl w-[100%]'/></Link></SwiperSlide> 
             </Swiper>
           </div>
         
@@ -42,13 +43,28 @@ const Activity = () => {
           <div className='2xl:text-2xl xl:text-xl lg:text-lg text-sm' ><h1>Activities</h1></div>    
             <div className='justify-center items-center space-x-5 space-y-5 w-full'>
               <div className='flex w-full justify-center items-center'>
-                <img src= {Yoga} alt="Image-yoga" className='rounded-2xl w-1/4 mx-3'/>
-                <img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl w-1/4 mx-3' />
-                <img src= {Dance} alt="Image-Dance" className='rounded-2xl w-1/4 mx-3'/>
+
+                <Link to = '/yoga'>
+                <img src= {Yoga} alt="Image-yoga" className='rounded-2xl  mx-3'/>
+                </Link>
+                
+                <Link to = '/bodyweight'>
+                <img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl  mx-3' />
+                </Link>
+
+                <Link to = '/dance'>
+                <img src= {Dance} alt="Image-Dance" className='rounded-2xl  mx-3'/>
+                </Link>
               </div>
               <div className='flex w-full justify-center items-center'>
-                <img src= {JumpingRope} alt="Image-JumpingRope" className='rounded-2xl w-1/3 mx-3'/>
-                <img src= {Pilates} alt="Image-Pilates" className='rounded-2xl w-1/3 mx-3'/> 
+
+              <Link to = '/jumpingrope'>
+                <img src= {JumpingRope} alt="Image-JumpingRope" className='rounded-2xl  mx-3'/>
+                </Link>
+
+                <Link to = '/pilates'>
+                <img src= {Pilates} alt="Image-Pilates" className='rounded-2xl  mx-3'/> 
+                </Link>
               </div>
             </div> 
         </div>
