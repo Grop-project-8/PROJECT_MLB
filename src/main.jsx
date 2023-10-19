@@ -16,6 +16,7 @@ import EditForm from './Components/Userprofile/Userform/Userform.jsx'
 import Register from "./Components/Register/Register.jsx";
 import Forgot_password_mobile from "./Components/login_mobile/Forgot_password_mobile.jsx";
 import Resetpass from "./Components/Resetpass/Resetpass.jsx";
+import DiaryCard from "./Components/Diary/DiaryCard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/activity",
-    element: <App />,
+    element: <DiaryCard />,
   },
   {
     path: "/news",
