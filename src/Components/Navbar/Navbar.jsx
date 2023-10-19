@@ -51,7 +51,7 @@ const Navbar = () => {
           <li className=" 2xl:text-sm text-xs">
             <Link to="/">Activity</Link>
           </li>
-          <li>
+          <li className=" 2xl:text-sm text-xs">
             <a href="">Article</a>
           </li>
           <li className=" 2xl:text-sm text-xs">

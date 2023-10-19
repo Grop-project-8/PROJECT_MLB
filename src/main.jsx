@@ -6,6 +6,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage.jsx";
 import Layout from "./Components/Layout/Layout.jsx";
 import Login from "./Components/Login/Login.jsx";
+import Yoga from "./Pages/videoGellery/5type/yoga.jsx";
+import Pilates from "./Pages/videoGellery/5type/pilates.jsx";
+import BodyWeight from "./Pages/videoGellery/5type/bodyWeight.jsx";
+import Dance from "./Pages/videoGellery/5type/dance.jsx";
+import JumpingRope from "./Pages/videoGellery/5type/jumpingRope.jsx";
+import FullVideo from "./Pages/videoGellery/FullVideo.jsx";
+// import VideoCard from "./Pages/videoGellery/VideoCard.jsx";
+// import CustomRoute from "./Pages/videoGellery/customroute.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +48,51 @@ const router = createBrowserRouter([
     path: "/sign",
     element: <App />,
   },
+  {
+    path: "/yoga",
+    element: <Yoga />,
+  },
+  {
+    path: "/bodyWeight",
+    element: <BodyWeight />,
+  },
+  {
+    path: "/pilates",
+    element: <Pilates />,
+  },
+  {
+    path: "/dance",
+    element: <Dance />,
+  },
+  {
+    path: "/jumpingrope",
+    element: <JumpingRope />,
+  },
+  {
+    path:  "/jumpingrope/:title", 
+    element: <FullVideo />
+  },
+  {
+    path:  "/dance/:title", 
+    element: <FullVideo />
+  },
+  {
+    path:  "/pilates/:title", 
+    element: <FullVideo />
+  },
+  {
+    path:  "/yoga/:title", 
+    element: <FullVideo />
+  },
+  {
+    path:  "/bodyweight/:title", 
+    element: <FullVideo />
+  },
+  {
+    path: '/Full/:id',
+    element: <FullVideo />
+  }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
