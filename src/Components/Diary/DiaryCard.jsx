@@ -46,6 +46,10 @@ const DiaryCard = () => {
 
     const changeActName = (even) => {
         setActivityName(even.target.value)
+        setFeed({
+            ...feed,
+            [even.target.name] : even.target.value 
+          }) 
     }
 
     /* console.log("detail :",detail,"duration :",duration,"Type : ",activityType,"Name :",activityName);
@@ -70,6 +74,17 @@ const DiaryCard = () => {
           .catch((err) => console.log(err));
       };
 
+      /* const handleUpdate = async (id,data) => {
+        console.log(id,data);
+        update(id,feed)
+            .then(res => {
+            console.log(res.data);
+            loadData();
+          })
+          .catch((err) => console.log(err));
+      } */
+      console.log(data);
+
   return (
     <>
         {/* Mobile */}
@@ -80,28 +95,23 @@ const DiaryCard = () => {
             <h1 className='text-center font-bold text-sm'>Alex Mccarl</h1>
             <div className='p-2'>
                 {/* <label className='flex justify-center items-center pb-2'>Choose an activity</label> */}
-                <select className='w-full p-2 rounded-lg' value={activityType} onChange={changeActType}>
+                <select className='w-full p-2 rounded-lg' value={activityType} name='activitytype' onChange={changeActType}>
                     <option value='activity' name='activitytype'>-- Activity type --</option>
-                    {activities.map(actT => (
-                        <option value={actT.actType}>{actT.actType}</option>
+                    {activities.map((actT,index) => (
+                        <option key={index} value={actT.actType}>{actT.actType}</option>
                     ))}
                 </select>
 
-                <select className='w-full p-2 rounded-lg mt-2' value={activityName} onChange={changeActName}>
-                    <option value='activity' name='acitivityname'>-- Activity name --</option>
-                    {actName.map(actN => (
-                        <option value={actN.name}>{actN.name}</option>
-                    ))}
-                </select>
 
-                <input className='p-2 rounded-lg mt-2 w-3/5 ' type="number" placeholder='Duration' />
-                <label className='p-1 font-bold mx-3'>Minute     </label>
+                <input className='p-2 rounded-lg mt-2 w-3/5 ' type="number" placeholder='Duration' value={feed.duration} name='duration' onChange={handleChange}/>
+                <label className='p-1 font-bold mx-3'>Minute</label>
 
                 <textarea
                 className='mt-2 w-full p-2 rounded-lg'
                 placeholder="What's on your mind?"
-                name= 'discription'
-                onChange={(e) => handleChange(e)}
+                value={feed.detail} 
+                name='detail'
+                onChange={handleChange}
                 ></textarea>
             
             </div>
@@ -127,14 +137,14 @@ const DiaryCard = () => {
                             <select className='w-[50%]  p-2 rounded-lg m-2' value={feed.activitytype} onChange={changeActType} name='activitytype'>
                                 <option value='activitytype' selected >-- Activity type --</option>
                                 {activities.map((actT,index) => (
-                                    <option  key={index} value={actT.actType}>{actT.actType}</option>
+                                    <option  key={index} value={actT.actType}> {actT.actType}</option>
                                 ))}
                             </select>
 
-                            <select className='w-[50%] p-2 rounded-lg m-2' value={feed.activityname} onChange={handleChange} name='activityname'>
+                            <select className='w-[50%] p-2 rounded-lg m-2' value={feed.activityname} onChange={changeActName} name='activityname'>
                                 <option value='activityname' disabled selected>-- Activity name --</option>
                                 {actName.map((actN,index) => (
-                                    <option key={index} value={actN.name}>{actN.name}</option>
+                                    <option key={index} value={actN.name}> {actN.name} </option>
                                 ))}
                             </select>
                         </div>
@@ -155,7 +165,6 @@ const DiaryCard = () => {
                 </form>
                 {data.activity.map((activity, index) => (
                 <div key={index} className='w-[700px] my-8 p-4 bg-yellow-50 rounded-xl hidden lg:block'>
-
                     <FeedSection 
                     handleRemove={() => handleRemove(activity._id)} 
                     id={activity._id}
