@@ -85,6 +85,7 @@ export default function ForgotPassword() {
           </div>
 
           {/* ช่องกรอกรหัส OTP และรหัสผ่านใหม่ */}
+          
           <input
             type="text"
             placeholder="OTP"
@@ -92,6 +93,10 @@ export default function ForgotPassword() {
             onChange={(e) => setOTP(e.target.value)}
             className="p-2 border-2 border-slate-900 w-full rounded-lg"
           />
+
+     
+          
+          
 
           <input
             type="password"
