@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { register } from "../../Function/auth";
 import { useState } from "react";
 import {GrFormPrevious} from 'react-icons/gr'
+import weight from '../../assets/login/weight.jpg'
 
 
 
@@ -60,7 +61,7 @@ function Register() {
   }
 
   return (
-    <div className="lg:container lg:flex border-2">
+    <div className="lg:container lg:flex ">
             <GrFormPrevious onClick={goBack} className="lg:text-[60px] text-[40px] m-4"/>
 
       {/* form mobile */}
@@ -136,11 +137,11 @@ function Register() {
       </div>
 
       {/* img */}
-      <div className="hidden lg:inline border w-[100%]">
+      <div className="hidden lg:inline w-[100%]">
         <img
-          src={hero}
+          src={weight}
           alt="image-register"
-          className="object-cover h-screen  object-top md:w-full"
+          className="object-cover h-screen  object-top md:w-full rounded-lg"
         />
       </div>
     </div>

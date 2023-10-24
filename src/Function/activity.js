@@ -11,8 +11,9 @@ export const create = async(data) => {
     })
 }
 
-export const edit = async (id,data) => {
-    return await axios.post(`http://localhost:8000/activity/${id}`, data , {
+export const updated = async (data) => {
+    console.log(data);
+    return await axios.put(`http://localhost:8000/activity/` ,data , {
         withCredentials: true,
     })
 }
