@@ -18,9 +18,7 @@ export default function VideoCard({ url, title, img }) {
         </div>
 
         <div className="pl-2 pt-1 m-[3px]">
-          <button className="bg-myGreen  text-black rounded w-[40%] justify-center">
-            view full page
-          </button>
+         
           <p>{title}</p>
         </div>
       </div>
