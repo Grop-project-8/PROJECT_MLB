@@ -40,7 +40,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/activity",
-    element: <DiaryCard />,
+    element:
+    <Layout>
+     <DiaryCard />
+     </Layout>,
   },
   {
     path: "/news",
