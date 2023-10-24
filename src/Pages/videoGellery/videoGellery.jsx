@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import VideoCard from './VideoCard';
 import {AiOutlineArrowLeft} from "react-icons/ai";
-import vid_list from './vid_list';
 import {Link} from 'react-router-dom'
 import axios, { all } from 'axios';
 
 
  const VideoGellery = () => {
-  const alltype = [...vid_list.bodyWeight, ...vid_list.dance, ...vid_list.jumpingRope, ...vid_list.pilates, ...vid_list.yoga]
   const [allVideo, setAllVideo]= useState([])
   console.log(allVideo)
   useEffect(()=>{
@@ -22,7 +20,6 @@ import axios, { all } from 'axios';
     }
   }
 
-
   return (<>
   <div className='static pl-2'>
   <AiOutlineArrowLeft  className='static inline-block  bg-white'/>
@@ -36,9 +33,7 @@ import axios, { all } from 'axios';
           <Link to={`/Full/${video._id}`}>
            <VideoCard  url={video.youtube_embed_link} title={video.title} />
           </Link>
-
         ))}
- 
     </div>
  
     </>

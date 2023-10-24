@@ -4,8 +4,11 @@ import axios from "axios";
 import { AiFillCamera } from 'react-icons/ai'
 import { Spin } from "antd";
 
+
 const Upload = ({ userData }) => {
+
   const [image, setImage] = useState(userData.profileImage);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChangeFile = (e) => {
@@ -39,18 +42,17 @@ const Upload = ({ userData }) => {
   };
 
   return (
-    <div className="text-md text-mygray relative ">
+    <div className="">
       <label>
-        <div className="rounded-full overflow-hidden mx-auto w-[10rem] relative">
+        <div className="rounded-full overflow-hidden w-20 h- lg:w-44 lg:h-44 mx-auto">
           {isLoading ? (
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "10rem" }}>
               <Spin/>
             </div>
           ) : (
-            <img className="w-full" src={image} alt="img_user" />
+            <img className="w-full " src={image} alt="img_user" />
           )}
         </div>
-        <AiFillCamera className="cursor-pointer absolute top-[80%] md:right-[25%] right-[10%]" />
         <input
           type="file"
           name="file"
@@ -58,6 +60,7 @@ const Upload = ({ userData }) => {
           accept="images/*"
           onChange={handleChangeFile}
         />
+        
       </label>
     </div>
   );

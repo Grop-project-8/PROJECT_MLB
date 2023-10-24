@@ -1,6 +1,5 @@
 import {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-import vid_list from '../videoGellery/vid_list'
 import axios from 'axios';
 
  const FullVideo = () => {
@@ -22,8 +21,7 @@ try {
     getVideo(id)
   },[id])
 
-  // const vdofull = findvdo(title)
-  
+
   return (
   <>
     <div className='flex justify-center ' >
@@ -41,14 +39,3 @@ try {
 }
 export default FullVideo
 
-function findvdo(title) {
-  const categories = Object.keys(vid_list);
-  for (const category of categories) {
-    const videos = vid_list[category];
-    const vdo = videos.find((item) => item.title === title);
-    if (vdo) {
-      return vdo.youtube_embed_link;
-    }
-  }
-  return null;
-}

@@ -1,17 +1,17 @@
-import { useState,useContext,useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import logo from "../../assets/logo/logo.svg";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Space } from "antd";
-import { ContextProvider } from '../../Function/useContext'
-import { checkId,logOut} from '../../Function/auth'
+import { ContextProvider } from "../../Function/useContext";
+import { checkId, logOut } from "../../Function/auth";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const { isLoggedIn ,setIsLoggedIn } = useContext(ContextProvider);
+  const { userData, isLoggedIn, setIsLoggedIn } = useContext(ContextProvider);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,22 +19,21 @@ const Navbar = () => {
         const idData = await checkId();
         setIsLoggedIn(idData.data.isLoggedIn);
       } catch (error) {
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
     };
     fetchData();
   }, [setIsLoggedIn]);
-  
-  
+
   const handleLogout = async () => {
     try {
       const logout = await logOut();
-      toast('Log out')
-      setIsLoggedIn(logout.data.isLoggedIn)
+      toast("Log out");
+      setIsLoggedIn(logout.data.isLoggedIn);
     } catch (err) {
-      console.error('Error logging out:', err);
+      console.error("Error logging out:", err);
     }
-  }
+  };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -93,39 +92,40 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="flex ml-10 px-2">
-        <ul className="flex my-auto space-x-4 items-center">
-          {isLoggedIn ? (
-            <div className="space-x-4 ">
-              <Space wrap size={16}>
-                <Link to="/profile">
-                  <Avatar
-                    size="large"
-                    icon={<UserOutlined />}
-                    src={isLoggedIn ? "" : null}
-                  />
-                </Link>
-              </Space>
-              <Link className="text-sm" to="/profile">
-                Profile
-              </Link>
-
-              <Link onClick={handleLogout} className="text-sm" >
-                Logout
-              </Link>
-            </div>
-          ) : (
-            <div className="flex items-center space-x-3">
-              <li className=" 2xl:text-sm text-xs">
-                <Link to="/login">Login</Link>
-              </li>
-              <li className="2xl:text-sm text-xs bg-myGreen px-2 py-2 rounded-[12px] w-[100%]">
-                <Link to="/sign">Sign up</Link>
-              </li>
-            </div>
-          )}
-        </ul>
+      <div className="flex  items-center ">
+  <ul className="flex my-auto space-x-4 items-center">
+    {isLoggedIn ? (
+      <div className="space-x-4 flex">
+        <Link to="/profile">
+          <Avatar
+            className="hidden md:block"
+            size={50} 
+            icon={<UserOutlined />}
+            src={isLoggedIn && userData ? userData.profileImage : null}
+            alt="User Profile"
+          />
+        </Link>
+        <div className="flex items-center space-x-5"> 
+          <Link className="text-sm" to="/profile">
+            Profile
+          </Link>
+          <Link onClick={handleLogout} className="text-sm">
+            Logout
+          </Link>
+        </div>
       </div>
+    ) : (
+      <div className="flex items-center space-x-3">
+        <li className="2xl:text-sm text-xs">
+          <Link to="/login">Login</Link>
+        </li>
+        <li className="2xl:text-sm text-xs bg-myGreen px-2 py-2 rounded-[12px] w-[100%]">
+          <Link to="/sign">Sign up</Link>
+        </li>
+      </div>
+    )}
+  </ul>
+</div>
     </div>
   );
 };

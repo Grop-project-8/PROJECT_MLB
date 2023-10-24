@@ -1,23 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { updateProfile } from "../../../Function/userRouter";
 import { toast } from "react-toastify";
-import { createImage } from "../../../Function/userRouter";
+import Swal from 'sweetalert2';
 
 const EditForm = ({ Editform, data }) => {
-  const [selectedFile, setSelectedFile] = useState(null);
-
-
   const [value, setValue] = useState({
     height: data.height || "",
     weight: data.weight || "",
   });
-
-  useEffect(() => {
-    setValue({
-      height: data.height || "",
-      weight: data.weight || "",
-    });
-  }, [data]);
 
   const handleCancel = (e) => {
     e.preventDefault();
@@ -32,7 +22,18 @@ const EditForm = ({ Editform, data }) => {
   };
 
   const handleSubmit = async (e) => {
-    if (window.confirm("Are you sure you want to save the changes?")) {
+    e.preventDefault();
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'You want to save the changes?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, save it!',
+    });
+
+    if (result.isConfirmed) {
       try {
         const res = await updateProfile({
           height: value.height,
@@ -52,7 +53,7 @@ const EditForm = ({ Editform, data }) => {
       <div className="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center z-10">
         <div className="bg-white p-8 rounded shadow-2xl">
           <form className="w-64">
-          <div className="mb-4">
+            <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="height"

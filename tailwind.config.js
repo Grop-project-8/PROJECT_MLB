@@ -10,7 +10,7 @@ export default {
         lg: "2.25rem",
         xl: "2.5rem",
         "2xl": "2.75rem",
-
+        
         // text-xs: ขนาดเล็กสุด ( 0.75rem หรือ 12px)
         // text-sm: ขนาดเล็ก ( 0.875rem หรือ 14px)
         // text-base: ขนาดปกติ ( 1rem หรือ 16px)

@@ -15,7 +15,7 @@ const UserRoute = ({ children }) => {
     const fetchData = async () => {
       try {
         const res = await currentUser();
-        if(res.data.role === "user"){
+        if(res.data.role === "admin"){
           setIsLoading(false);
         }else{
           setIsLoading(true)

@@ -12,13 +12,12 @@ import Userprofile from "./Components/Userprofile/Userprofile.jsx";
 import UserRoute from "./Components/Routes/userRoute.jsx";
 import { CartContextProvider } from "./Function/useContext.jsx";
 import DiaryCary from "./Components/Diary/DiaryCard.jsx";
-import EditForm from './Components/Userprofile/Userform/Userform.jsx'
 import Register from "./Components/Register/Register.jsx";
 import Forgot_password_mobile from "./Components/login_mobile/Forgot_password_mobile.jsx";
 import Resetpass from "./Components/Resetpass/Resetpass.jsx";
 import DiaryCard from "./Components/Diary/DiaryCard.jsx";
-import FullVideo from './Pages/videoGellery/FullVideo.jsx'
-import JumpingRope  from './Pages/videoGellery/5type/jumpingRope.jsx'
+import FullVideo from "./Pages/videoGellery/FullVideo.jsx";
+import VideoGellery from './Pages/videoGellery/videoGellery.jsx'
 
 const router = createBrowserRouter([
   {
@@ -53,7 +52,9 @@ const router = createBrowserRouter([
     path: "/profile",
     element: (
       <UserRoute>
+        <Layout>
         <Userprofile />
+        </Layout>
       </UserRoute>
     ),
   },
@@ -66,12 +67,12 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path:"/forgot",
-    element:<Forgot_password_mobile/>
+    path: "/forgot",
+    element: <Forgot_password_mobile />,
   },
   {
-    path:"/repass",
-    element:<Resetpass/>
+    path: "/repass",
+    element: <Resetpass />,
   },
   // {
   //   path: "/yoga",
@@ -89,35 +90,34 @@ const router = createBrowserRouter([
   //   path: "/dance",
   //   element: <Dance />,
   // },
+  // {
+  //   path: "/jumpingrope",
+  //   element: <JumpingRope />,
+  // },
+  // {
+  //   path:  "/jumpingrope/:title",
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/dance/:title",
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/pilates/:title",
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/yoga/:title",
+  //   element: <FullVideo />
+  // },
   {
-    path: "/jumpingrope",
-    element: <JumpingRope />,
+    path:  "/Full",
+    element: <VideoGellery />
   },
-  // {
-  //   path:  "/jumpingrope/:title", 
-  //   element: <FullVideo />
-  // },
-  // {
-  //   path:  "/dance/:title", 
-  //   element: <FullVideo />
-  // },
-  // {
-  //   path:  "/pilates/:title", 
-  //   element: <FullVideo />
-  // },
-  // {
-  //   path:  "/yoga/:title", 
-  //   element: <FullVideo />
-  // },
-  // {
-  //   path:  "/bodyweight/:title", 
-  //   element: <FullVideo />
-  // },
   {
-    path: '/Full/:id',
-    element: <FullVideo />
-  }
-
+    path: "/Full/:id",
+    element: <FullVideo />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
