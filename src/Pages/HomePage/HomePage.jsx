@@ -1,6 +1,7 @@
 import Discription from "../../Components/Hero/Discription"
 import HomeSignup from "../../Components/Hero/HomeSignup"
 import Activity from "../../Components/Avtivities/Activity";
+import VideoGellery from '../videoGellery/videoGellery'
 
 import Home from "../../Components/Hero/Home";
 import Footer from "../../Components/Layout/Footer";
@@ -12,6 +13,7 @@ function HomePage() {
     <Discription/>
     <Activity />
     <HomeSignup/>
+    <VideoGellery/>
     <Footer/>
     </>
   )

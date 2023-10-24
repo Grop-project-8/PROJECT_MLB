@@ -57,7 +57,7 @@ class Stopwatch extends Component {
     const time = `${this.renderMinutes()}:${this.renderSeconds()}`
 
     return (
-      <div >
+      <div className='mt-36' >
         <div className='flex justify-center mx-4' >
           <p className='text-[48px]'>Stopwatch</p>
         </div>
