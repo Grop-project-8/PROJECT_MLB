@@ -11,12 +11,6 @@ export const create = async(data) => {
     })
 }
 
-/* export const readData = async (id) => {
-    return await axios.get("http://localhost:8000/activity/",{data:{id}},{
-        withCredentials: true, 
-    })
-} */
-
 export const updated = async (data) => {
     console.log(data);
     return await axios.put(`http://localhost:8000/activity/` ,data , {

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { GrFormPrevious } from "react-icons/gr";
+import login1 from '../../assets/login/login1.jpg'
 
 function Login() {
   const navigate = useNavigate();
@@ -105,9 +106,9 @@ function Login() {
       </div>
 
       {/* imgage */}
-      <div id="right-page" className="hidden md:block w-[100%] border   ">
+      <div id="right-page" className="hidden md:block w-[100%] rounded-xl   ">
         <img
-          src={hero}
+          src={login1}
           alt="login-image"
           className="object-cover w-[100%] h-full object-top md:w-full"
         />

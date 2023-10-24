@@ -17,6 +17,8 @@ import Register from "./Components/Register/Register.jsx";
 import Forgot_password_mobile from "./Components/login_mobile/Forgot_password_mobile.jsx";
 import Resetpass from "./Components/Resetpass/Resetpass.jsx";
 import DiaryCard from "./Components/Diary/DiaryCard.jsx";
+import FullVideo from './Pages/videoGellery/FullVideo.jsx'
+import JumpingRope  from './Pages/videoGellery/5type/jumpingRope.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,7 +35,10 @@ const router = createBrowserRouter([
   },
   {
     path: "/activity",
-    element: <DiaryCard />,
+    element:
+    <Layout>
+     <DiaryCard />
+     </Layout>,
   },
   {
     path: "/news",
@@ -71,6 +76,51 @@ const router = createBrowserRouter([
     path:"/repass",
     element:<Resetpass/>
   },
+  // {
+  //   path: "/yoga",
+  //   element: <Yoga />,
+  // },
+  // {
+  //   path: "/bodyWeight",
+  //   element: <BodyWeight />,
+  // },
+  // {
+  //   path: "/pilates",
+  //   element: <Pilates />,
+  // },
+  // {
+  //   path: "/dance",
+  //   element: <Dance />,
+  // },
+  {
+    path: "/jumpingrope",
+    element: <JumpingRope />,
+  },
+  // {
+  //   path:  "/jumpingrope/:title", 
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/dance/:title", 
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/pilates/:title", 
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/yoga/:title", 
+  //   element: <FullVideo />
+  // },
+  // {
+  //   path:  "/bodyweight/:title", 
+  //   element: <FullVideo />
+  // },
+  {
+    path: '/Full/:id',
+    element: <FullVideo />
+  }
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
