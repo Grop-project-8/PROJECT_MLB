@@ -3,12 +3,16 @@ import { useState } from "react";
 import { GrFormClose } from "react-icons/gr";
 import { BiSolidEditAlt } from "react-icons/bi";
 import { updated } from "../../Function/activity";
+import { Avatar } from "antd";
+import { UserOutlined } from "@ant-design/icons";
+
 import Swal from 'sweetalert2';
 /* import { getuser } from '../../Function/userRouter'
  */
 import moment from 'moment'
 
 const FeedSection = ({
+  userData,
   activityType,
   activityName,
   detail,
@@ -32,8 +36,8 @@ const FeedSection = ({
     });
   };
 
-  const formattedDate = moment(createAt).startOf('hour').fromNow();
 
+  const formattedDate = moment(createAt).format('llll');
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -70,14 +74,16 @@ const FeedSection = ({
     <div className="shadow-xl rounded-lg">
       <div className='flex ml-5 rounded-lg'>
           <div className='w-[60px] md:w-[60px] sm:w-[60px]'>
-          <img
-              className='w-full rounded-full'
-              src='https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg'
-              alt='User 1'
-            />
+          <Avatar
+                  className="cursor-pointer"
+                  size={50}
+                  icon={<UserOutlined />}
+                  src={userData ? userData.profileImage : null}
+                  alt="User Profile"
+                />
           </div>
           <div className='mx-4 my-2'>
-            <h3 className='font-bold text-xs'>username</h3>
+            <h3 className='font-bold text-xs'>{userData.username}</h3>
             <p className='text-[12px]'>{formattedDate}</p> 
           </div>
           <div className='ml-auto flex items-center'>

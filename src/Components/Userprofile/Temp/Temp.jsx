@@ -54,7 +54,7 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="flex items-center  lg:mt-0">
+    <div className="flex items-center lg:mt-5 mt-10">
   <div className="bg-white p-4  shadow-md  rounded-xl shadow-[#999999]">
     <div className="flex items-center">
       <input

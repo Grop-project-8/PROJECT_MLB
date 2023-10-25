@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import Home1 from '../../assets/hero/Home.jpg'
+import Home1 from '../../assets/hero/Home.svg'
+
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
         <img
           src={Home1}
           alt="Image-hero"
+          loading='lazy'
           className="object-cover w-full md:w-[100%] lg:w-full xl:w-full opacity-60 h-auto"
         />
       </div>

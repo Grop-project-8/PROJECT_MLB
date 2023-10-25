@@ -1,4 +1,6 @@
-import weight from '../../assets/hero/weight.jpg'
+import hero2 from '../../assets/hero/hero2.svg'
+import weight from '../../assets/hero/weight.svg'
+// import weight from '../../assets/hero/weight.jpg'
 
 function Discription() {
   return (

@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { updateProfile } from "../../../Function/userRouter";
 import { toast } from "react-toastify";
 import Swal from 'sweetalert2';
+import { ContextProvider } from '../../../Function/useContext'
+
 
 const EditForm = ({ Editform, data }) => {
+
+  const { setSuccess } = useContext(ContextProvider); 
+
   const [value, setValue] = useState({
     height: data.height || "",
     weight: data.weight || "",
@@ -39,6 +44,7 @@ const EditForm = ({ Editform, data }) => {
           height: value.height,
           weight: value.weight,
         });
+        setSuccess(prev => !prev)
         Editform();
         toast.success(res.data);
       } catch (error) {
