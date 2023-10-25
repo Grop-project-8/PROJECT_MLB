@@ -79,32 +79,7 @@ const DiaryCard = () => {
     e.preventDefault();
   };
 
-  const handleRemove = async (id) => {
-    removed(id)
-      .then((res) => {
-        //console.log(res.data);
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Post Deleted Success!!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        loadData();
-      })
-      .catch((err) => console.log(err));
-  };
-
-  /* const handleUpdate = async (id,data) => {
-        console.log(id,data);
-        update(id,feed)
-            .then(res => {
-            console.log(res.data);
-            loadData();
-          })
-          .catch((err) => console.log(err));
-      } */
-  /* console.log(data); */
+      
 
   return (
     <div className="lg:grid grid-cols-2 ">
