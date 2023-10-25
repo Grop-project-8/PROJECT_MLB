@@ -23,13 +23,13 @@ const JumpingRope = () => {
     try {
       const response = await axios.get('http://localhost:8000/getyoga');
       setAllVideo(response.data)
-      console.log('fdgหเดเหก้เด้fg', response.data)
+    
     } catch (error) {
-      console.log(error)
+   
     }
   }
   const filtertype = allVideo.filter(video => video.type === "jumpingRope");
-  console.log(filtertype)
+
   return (
     <>
     <GrFormPrevious

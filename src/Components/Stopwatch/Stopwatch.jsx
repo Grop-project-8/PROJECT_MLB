@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import { GrFormPrevious } from "react-icons/gr";
 
 
 class Stopwatch extends Component {
@@ -52,12 +53,21 @@ class Stopwatch extends Component {
     return minutes
   }
 
+
   render() {
     const {isTimerRunning} = this.state
     const time = `${this.renderMinutes()}:${this.renderSeconds()}`
+    const goBack = () => {
+      window.history.back();
+    };
 
     return (
-      <div className='mt-36' >
+      <>
+      <GrFormPrevious
+      onClick={goBack}
+      className="lg:text-[60px] text-[40px] m-4"
+    /> 
+      <div className='mt-24' >
         <div className='flex justify-center mx-4' >
           <p className='text-[48px]'>Stopwatch</p>
         </div>
@@ -96,6 +106,7 @@ class Stopwatch extends Component {
               </button>
             </div>
       </div>
+      </>
     ) 
   }
 }
