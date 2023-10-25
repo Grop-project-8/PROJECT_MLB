@@ -23,6 +23,7 @@ import Pilates from "./Components/videoGellery/5type/pilates.jsx";
 import BodyWeight from "./Components/videoGellery/5type/bodyWeight.jsx";
 import Dance from './Components/videoGellery/5type/dance.jsx'
 import Stopwatch from "./Components/Stopwatch/Stopwatch.jsx";
+import VideoGellery from './Components/videoGellery/videoGellery.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/activity",
+    path: "/diarycard",
     element:
     <Layout>
      <DiaryCard />
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
         </Layout>
       </UserRoute>
     ),
+  },
+  {
+    path: "/activity",
+    element: <VideoGellery/>,
   },
   {
     path: "/DiaryCary",

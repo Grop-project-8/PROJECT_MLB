@@ -1,11 +1,17 @@
-import React from "react";
+import React ,{useState}from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import axios from "axios";
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+
+
+
 export const data = {
-  labels: ["YOGA", "BODY WEIGHT", "JUMPINGRope","DANCE", "Training"],
+  labels: ["YOGA", "BODY WEIGHT", "JUMPINGRope","DANCE", "PELATIES"],
+
   datasets: [
     {
       label: "Calories ",

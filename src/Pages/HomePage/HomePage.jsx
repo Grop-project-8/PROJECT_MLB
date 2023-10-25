@@ -13,7 +13,6 @@ function HomePage() {
     <Discription/>
     <Activity />
     <HomeSignup/>
-    <VideoGellery/>
     <Footer/>
     </>
   )

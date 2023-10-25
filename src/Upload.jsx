@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import Resize from "react-image-file-resizer";
 import axios from "axios";
-import { AiFillCamera } from 'react-icons/ai'
 import { Spin } from "antd";
+import { ContextProvider } from './Function/useContext'
+import { Avatar } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 
 
-const Upload = ({ userData }) => {
+
+
+const Upload = ({userData}) => {
 
   const [image, setImage] = useState(userData.profileImage);
+
+  const { success, setSuccess } = useContext(ContextProvider); 
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,9 +34,10 @@ const Upload = ({ userData }) => {
         }, {
           withCredentials: true,
         }).then(res => {
-          setImage(URL.createObjectURL(files[0])); // แสดงรูปทันทีหลังจากอัปโหลดสำเร็จ
-          setIsLoading(false); // หยุดโหลด
-          console.log(res);
+          setImage(res.data.secure_url);
+          setIsLoading(false); 
+          setSuccess(prev => !prev)
+          // console.log(res);
         }).catch(err => {
           console.log(err);
           setIsLoading(false); // หยุดโหลดหากเกิดข้อผิดพลาด
@@ -44,13 +51,19 @@ const Upload = ({ userData }) => {
   return (
     <div className="">
       <label>
-        <div className="rounded-full overflow-hidden w-20 h- lg:w-44 lg:h-44 mx-auto">
+        <div className="rounded-full overflow-hidden  mx-auto">
           {isLoading ? (
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "10rem" }}>
               <Spin/>
             </div>
           ) : (
-            <img className="w-full " src={image} alt="img_user" />
+            <Avatar
+            className="cursor-pointer"
+            size={150}
+            icon={<UserOutlined />}
+            src={userData ? image : null}
+            alt="img_use"
+          />
           )}
         </div>
         <input

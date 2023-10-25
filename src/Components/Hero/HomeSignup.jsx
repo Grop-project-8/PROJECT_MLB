@@ -1,4 +1,4 @@
-import homesign from '../../assets/hero/homesign.jpg'
+import homesign from '../../assets/hero/homesign.svg'
 import { Link } from 'react-router-dom'
 
 function HomeSignup() {
@@ -25,7 +25,7 @@ function HomeSignup() {
         </div>
 
         <div className='w-full'>
-          <img src={homesign} alt="absolute" className='object-cover w-full h-[50rem] rounded-lg' />
+          <img src={homesign} loading='lazy' alt="absolute" className='object-cover w-full h-[50rem] rounded-lg' />
         </div>
       </div>
     </div>

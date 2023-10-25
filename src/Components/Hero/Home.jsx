@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
-import Home1 from '../../assets/hero/Home.jpg'
+import Home1 from '../../assets/hero/Home.svg'
+
 
 function Home() {
   return (
     <div className="relative md:container sm:w-[100%]">
       <div className="md:w-full sm:h-[40rem] md:bg-black h-screen">
-        <img
-          src={Home1}
-          alt="Image-hero"
-          className="object-cover sm:w-full md:w-full lg:w-full xl:w-full opacity-80 h-full"
-        />
+          <img
+            src={Home1}
+            alt="Image-hero"
+            loading='lazy'
+            className="object-cover sm:w-full md:w-full lg:w-full xl:w-full opacity-80 h-full"
+          />
       </div>
 
       <div className="mx-auto relative"> {/* xl:container md:container */}
