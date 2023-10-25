@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { updatePassword } from "../../../Function/userRouter";
+import Swal from 'sweetalert2';
+
 
 const SetForm = ({ setform }) => {
+  
   const [value, setValue] = useState({
     oldPassword: "",
     newPassword: "",
@@ -23,24 +26,35 @@ const SetForm = ({ setform }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (window.confirm("Are you sure you want to save the changes?")) {
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'You want to save the changes?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, save it!',
+    });
+  
+    if (result.isConfirmed) {
       if (value.newPassword !== value.confirmPassword) {
-        toast.error("Password does not match");
+        toast.error('Password does not match');
       } else {
         try {
-            const res = await updatePassword({
+          const res = await updatePassword({
             oldPassword: value.oldPassword,
             newPassword: value.newPassword,
-          })
+          });
           setform();
           toast.success(res.data.message);
         } catch (error) {
-          console.error("Failed to update password", error);
-          toast.error("Failed to update password");
+          console.error('Failed to update password', error);
+          toast.error('Failed to update password');
         }
       }
     }
   };
+  
 
   return (
     <div>

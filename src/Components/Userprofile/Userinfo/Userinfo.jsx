@@ -8,7 +8,6 @@ import Upload from "../../../Upload";
 const Userinfo = ({ userData,toggleDashboard }) => {
 
   const [showEditform, setShowEditform] = useState(false);
-  const [image, setImage] = useState([]);
 
   if (!userData) {
     return <div>Loading...</div>;
@@ -20,69 +19,68 @@ const Userinfo = ({ userData,toggleDashboard }) => {
 
   let status = '';
   if (userData.bmi < 18.5) {
-    status = 'อยู่ในเกณฑ์น้ำหนักน้อยหรือผอม';
+    status = 'Underweight';
   } else if (userData.bmi >= 18.5 && userData.bmi < 22.9) {
-    status = 'อยู่ในเกณฑ์ปกติ';
+    status = 'Normal weight';
   } else if (userData.bmi >= 23 && userData.bmi < 24.9) {
-    status = 'น้ำหนักเกิน';
+    status = 'Overweight';
   } else if (userData.bmi >= 25 && userData.bmi < 29.9) {
-    status = 'โรคอ้วนระดับที่ 1';
+    status = 'Obesity Level 1';
   } else if (userData.bmi >= 30) {
-    status = 'โรคอ้วนระดับที่ 2';
+    status = 'Obesity Level 2';
   }
-
-  const handleImageChange = (e) => {
-    setImage(e.target.files[0]);
-  };
   
-  const submit = async (e) => {
-    e.preventDefault();
-    try {
-      const formData = new FormData();
-      formData.append('image', image);
-      await createImage(formData);
-    } catch (error) {
-      console.error('Error uploading image:', error);
-    }
-  }
 
 
   return (
-    <div className="w-full md:flex ">
-      <div className="  mx-auto w-1/2  md:w-1/3 ">
-        <div className="rounded-full overflow-hidden  mx-auto  w-[80%]  ">
-          <img className="w-full" src={userData.profileImage} alt="img_user" />
-        </div>
+    <div className="w-full  md:flex items-center justify-around	 ">
+      <div className="">
+       
+        <Upload userData={userData}/>
         
-        <Upload/>
-
         <div className="text-center mt-2">
             <button onClick={Editform} >
             Edit Profile
             </button>
           </div>
       </div>
-      <div className=" mx-[20px]  w-full ">
-          <div className="w-full  md:flex  ">
-            <div className="w-full">
-            <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">Username : {userData.username}</h2>
-            <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">height : {userData.height} cm</h2>
-            <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">weight : {userData.weight} kg</h2>
+
+      <div className="flex  md:ml-5">
+          <div className="w-full ">
+            <div className="w-full  ">
+
+           <div className=" ">
+           <h2 className="lg:text-[1.75rem] text-[1.25rem] md:text-[1.5rem] ">Username : {userData.username}</h2>
+           </div>
+
+           <div className="w-full">
+  <div className=" ">
+    <h2 className="w-auto lg:text-[1.75rem] text-[1.5rem] md:text-[1.5rem]">
+      height: {userData.height} cm
+    </h2>
+    <h2 className="w-auto lg:text-[1.75rem] text-[1.5rem] md:text-[1.5rem]">
+      weight: {userData.weight} kg
+    </h2>
+    <h2 className="lg:text-[1.75rem] text-[1.5rem] md:text-[1.5rem] ">BMI : {userData.bmi} </h2>
+
+  </div>
+  <div className="md:inline w-full">
+    <h2 className="lg:text-[1.75rem] text-[1.25rem] md:text-[1.5rem]">
+      Status: {status}
+    </h2>
+    {/* <InitialValue /> */}
+  </div>
+</div>
+
           </div>
-            <div className=" md:inline w-full ">
-              <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">BMI : {userData.bmi} </h2>
-              <h2 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">
-                Status : {status}
-              </h2>
-              <InitialValue />
-            </div>
+         
           </div>
-          <button
+          {/* <button
             onClick={toggleDashboard}
-            className="2xl:text-sm text-xs bg-myGreen px-2 py-2 rounded-[12px] w-1/3 mt-5 hidden lg:block "
+            className="lg:text-[1.5rem] bg-myGreen px-2 py-2 w-full rounded-[12px] w-1/3 mt-5 hidden lg:block "
           >
             view dashboard
-          </button>
+          </button> */}
         </div>
 
         {showEditform ? ( <EditForm data={userData} Editform={Editform} />) : (null) }

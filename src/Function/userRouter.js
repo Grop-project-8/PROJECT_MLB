@@ -1,9 +1,9 @@
 import axios from "axios";
 
 
-export const getuser = async () => {
+  export const getuser = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/getUser", {
+      const res = await axios.get(import.meta.env.VITE_REACT_API_URL+"getUser", {
         withCredentials: true, 
       });
       return res;
@@ -14,7 +14,7 @@ export const getuser = async () => {
 
   export const updatePassword = async (value) => {
     try {
-      const res = await axios.put("http://localhost:8000/updatePassword", value, {
+      const res = await axios.put(import.meta.env.VITE_REACT_API_URL+"updatePassword", value, {
         withCredentials: true,
       });
       return res;
@@ -25,7 +25,7 @@ export const getuser = async () => {
   
   export const updateProfile = async (value) => {
     try {
-      const res = await axios.put("http://localhost:8000/updateProfile", value, {
+      const res = await axios.put(import.meta.env.VITE_REACT_API_URL+"updateProfile", value, {
         withCredentials: true,
       });
       return res;
@@ -36,7 +36,7 @@ export const getuser = async () => {
 
   export const sendOTP = async (value) => {
     try {
-      const response = await axios.post("http://localhost:8000/sendOTP", value, {
+      const response = await axios.post(import.meta.env.VITE_REACT_API_URL+"sendOTP", value, {
         withCredentials: true,
       });
       return response.data; 
@@ -45,10 +45,9 @@ export const getuser = async () => {
     }
   };
   
-  
   export const rePass = async (value) => {
     try {
-      const response = await axios.post("http://localhost:8000/rePass", value, {
+      const response = await axios.post(import.meta.env.VITE_REACT_API_URL+"rePass", value, {
         withCredentials: true,
       });
       return response.data; 
@@ -59,7 +58,7 @@ export const getuser = async () => {
   
   export const createImage = async (value) => {
     try {
-      const response = await axios.post("http://localhost:8000/createImage", value, {
+      const response = await axios.post(import.meta.env.VITE_REACT_API_URL+"createImage", value, {
         withCredentials: true,
       });
       return response.data;

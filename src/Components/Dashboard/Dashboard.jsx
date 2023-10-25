@@ -8,18 +8,6 @@ import moment from "moment";
 
 const Dashboard = ({userData}) => {
 
-  // const mockLoginData = [
-  //   '2023-09-15',
-  //   '2023-09-16',
-  //   '2023-09-17',
-  // ].map((dateString) => new Date(dateString));
-
-  // const mockLoginData = [
-  //   new Date(2023, 8, 15),  
-  //   new Date(2023, 8, 16),
-  //   new Date(2023, 8, 23),
-  // ];
-  
 
   const formatDate = (date) => {
     return date instanceof Date ? moment(date).format("YYYY-MM-DD") : "";
@@ -50,12 +38,12 @@ const Dashboard = ({userData}) => {
   };
 
   return (
-    <div className="max-w-md p-3">
+    <div className="w-full lg:w-1/4 p-3 flex items-center">
       <Calendar
         onChange={setSelectedDate}
         value={selectedDate}
         tileClassName={tileClassName}
-        className="w-full text-black p-5 rounded-lg"
+        className="w-full border-none p-5 rounded-xl"
         locale="en-US"
       />
     </div>
