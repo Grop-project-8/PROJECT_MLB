@@ -7,40 +7,61 @@ import axios, { all } from 'axios';
 
 
  const VideoGellery = () => {
-  const alltype = [...vid_list.bodyWeight, ...vid_list.dance, ...vid_list.jumpingRope, ...vid_list.pilates, ...vid_list.yoga]
+
   const [allVideo, setAllVideo]= useState([])
-  console.log(allVideo)
+  const [showAll, setShowAll] = useState(false);
+
   useEffect(()=>{
     getData()
   },[])
+
   const getData = async() =>{
     try {
       const response = await axios.get('http://localhost:8000/getyoga');
       setAllVideo(response.data)
+      console.log('fdgdfg', response.data)
     } catch (error) {
       console.log(error)
     }
   }
+  
+  
+  const clickShowAll = () =>{
+   setShowAll(!showAll);
+  }
 
+  const buttonText = showAll ? 'View Less Videos' : 'View All Videos';
+  const buttonColor = showAll ? 'bg-myGray' : 'bg-myGreen';
+  const displayVid = showAll ? allVideo : allVideo.slice(0, 8)
 
   return (<>
   <div className='static pl-2'>
-  <AiOutlineArrowLeft  className='static inline-block  bg-white'/>
-    <p className='inline-block text-myGray font-poppins  2xl:text-sm text-xs pl-[5px]'>Video</p>
-    <button className='absolute end-10 bg-myGray p-1 rounded-[3px] '>view all videos</button>
+
+    <p className='inline-block text-myGray font-poppins  2xl:text-sm text-xs pl-[5px]'>All videos</p>
+   
   </div>
+
     <br />
     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center mx-1 gap-4'>
       {
-        allVideo.map((video) => (
+        displayVid.map((video) => (
           <Link to={`/Full/${video._id}`}>
-           <VideoCard  url={video.youtube_embed_link} title={video.title} />
+           <VideoCard  url={video.youtube_embed_link} title={video.title} img={video.thumbnail} />
           </Link>
 
         ))}
- 
     </div>
- 
+    <br />
+
+    <div className='flex  justify-center flex-col-1'>
+    <button className={`${buttonColor} text-black rounded w-[40%] h-[40px] justify-center`}
+     onClick={clickShowAll }
+     >
+      {buttonText} 
+      </button>
+    </div>
+    <br />
+    
     </>
   )
 }
