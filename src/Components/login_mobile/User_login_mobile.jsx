@@ -32,7 +32,7 @@ const User_login_mobile = () => {
           className="h-[50px] border-2 border-slate-900 w-full  rounded-lg"
         />
       </div>
-      <button className="bg-myGreen  text-black  py-2 px-4 rounded self-center">
+      <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150  py-2 px-4 rounded self-center">
         Log in
       </button>
       <div className="mx-[auto]">

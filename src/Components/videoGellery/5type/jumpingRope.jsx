@@ -39,7 +39,7 @@ const JumpingRope = () => {
     <div className=' flex justify-center items-center 2xl:text-2xl xl:text-xl lg:text-lg text-sm'><h1>Jumping rope</h1></div>
     <div className='flex justify-center items-center'>  
     <Link to = '/jumpingrope/stopwatch'>
-    <button className='bg-myGreen text text-black w-[180px] h-[120px] rounded-[10px] m-4'> Stop watch ⏱️</button>
+    <button className=' text text-black w-[180px] h-[120px] rounded-[10px] m-4 hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150'> Stop watch ⏱️</button>
     </Link>
     </div>
     <div className='lg:mx-[10rem] md:mx[4rem]'>

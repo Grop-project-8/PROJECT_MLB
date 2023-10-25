@@ -21,7 +21,7 @@ function Home() {
               Defeat Office Syndrome with Move-Life Balance!
             </p>
           <div className="flex justify-center w-full">
-            <Link to='/activity' className="bg-myGreen p-3 rounded-[12px] sm:w-3/3 2xl:text-md lg:text-md text-center md:w-3/3 shadow-xl md:text-sm lg:w-1/3 ">
+            <Link to='/activity' className=" p-3 rounded-[12px] sm:w-3/3 2xl:text-md lg:text-md text-center md:w-3/3 shadow-xl md:text-sm lg:w-1/3 hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 ">
               Try Workout
             </Link>
           </div>

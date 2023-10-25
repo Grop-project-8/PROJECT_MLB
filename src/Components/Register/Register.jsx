@@ -130,7 +130,7 @@ function Register() {
               accept term of use condition
             </span>
           </label>
-          <button onClick={handleSubmit} className="2xl:text-sm text-xs bg-myGreen mx-auto px-2 py-2 mt-5 rounded-[12px] w-[40%] ">
+          <button onClick={handleSubmit} className="2xl:text-sm text-xs mx-auto px-2 py-2 mt-5 rounded-[12px] w-[40%] hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 ">
             Sign Up
           </button>
         </form>

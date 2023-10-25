@@ -70,7 +70,7 @@ class Stopwatch extends Component {
 
 <br />
         <div className='flex justify-center mx-8' >
-              <button className="bg-myGreen  text-black rounded-[10px] justify-center p-4 mx-4"
+              <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 rounded-[10px] justify-center p-4 mx-4"
                 type="button"
                
                 onClick={this.onStartTimer}
@@ -79,7 +79,7 @@ class Stopwatch extends Component {
                 Start
               </button>
 
-              <button className="bg-myGreen  text-black rounded-[10px] justify-center p-4 mx-4"
+              <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 rounded-[10px] justify-center p-4 mx-4"
                 type="button"
                 
                 onClick={this.onStopTimer}
@@ -87,7 +87,7 @@ class Stopwatch extends Component {
                 Stop
               </button >
 
-              <button className="bg-myGreen  text-black rounded-[10px] justify-center p-4 mx-4"
+              <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 rounded-[10px] justify-center p-4 mx-4"
                 type="button"
                 
                 onClick={this.onResetTimer}
