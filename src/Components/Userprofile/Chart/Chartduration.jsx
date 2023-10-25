@@ -1,21 +1,42 @@
-import React ,{useState}from "react";
+import React ,{useState,useEffect}from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut,Bar } from "react-chartjs-2";
 import axios from "axios";
+import { Colors } from "chart.js";
+import { CategoryScale, Chart, registerables } from "chart.js";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
+Chart.register(CategoryScale);
+Chart.register(...registerables);
+Chart.register(Colors);
 
 
 
+export const Chartduration = () => {
 
-export const data = {
-  labels: ["YOGA", "BODY WEIGHT", "JUMPINGRope","DANCE", "PELATIES"],
+  const [chartData, setChartData] = useState({});
+  console.log("chartData",chartData);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const apiUrl = "http://localhost:8000/getUserperday";
+      try {
+        const response = await axios.get(apiUrl, { withCredentials: true });
+        const data = response.data;
+        setChartData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+const data = {
+  labels: Object.keys(chartData),
   datasets: [
     {
-      label: "Calories ",
-      data: [756.0, 999, 213, 535, 1112],
+      data: Object.values(chartData),
       backgroundColor: [
         "rgba(255, 99, 132, 0.2)",
         "rgba(54, 162, 235, 0.2)",
@@ -37,17 +58,15 @@ export const data = {
   ],
 };
 
-const averageCalories =
-  data.datasets[0].data.reduce((sum, value) => sum + value, 0) 
 
-export const Chartduration = () => {
   return (
     <>
       <div className="w-[300px] lg:w-[350px] lg:mx-0 mx-auto rounded ">
-        <h1 className="text-center font-bold text-xl"></h1>
         <div className="text-cent  justify-center m-auto">
-          <Doughnut data={data} />
+        <Doughnut data={data} />
         </div>
+        <h3 className="text-center text-[25px]">Graph comparing each type of exercise</h3>
+
       </div>
     </>
   );

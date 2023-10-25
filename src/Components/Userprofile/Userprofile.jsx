@@ -16,7 +16,7 @@ import {getuser} from '../../Function/userRouter'
 const Userprofile = () => {
 
   const [user, setUser] = useState(null);
-  const {  userData } = useContext(ContextProvider); 
+  const {  success,userData } = useContext(ContextProvider); 
 
 
   // console.log('uesr',userData)
@@ -34,7 +34,7 @@ const Userprofile = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [success]);
 
   const [showDashboard, setShowDashboard] = useState(false);
   const [showsetform, setShowSetform] = useState(false);

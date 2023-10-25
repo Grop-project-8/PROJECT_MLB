@@ -7,8 +7,7 @@ import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 import Swal from 'sweetalert2';
-/* import { getuser } from '../../Function/userRouter'
- */
+
 import moment from 'moment'
 
 const FeedSection = ({
