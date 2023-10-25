@@ -10,6 +10,14 @@ import axios from 'axios';
 
   const [Video ,setYogaVideo]= useState ({})
 
+  const handleVideoClick = async (videoId) => {
+    try {
+      await axios.post("http://localhost:8000/addlastVideo", { videoId: videoId });
+    } catch (error) {
+      console.error("Error sending video ID:", error);
+    }
+  };
+
   const getVideo = async (id)=>{
 try {
   const response = await axios.get(`http://localhost:8000/getyoga/${id}`)
@@ -22,7 +30,6 @@ try {
     getVideo(id)
   },[id])
 
-  // const vdofull = findvdo(title)
   
   return (
   <>
@@ -45,14 +52,3 @@ try {
 }
 export default FullVideo
 
-// function findvdo(title) {
-//   const categories = Object.keys(vid_list);
-//   for (const category of categories) {
-//     const videos = vid_list[category];
-//     const vdo = videos.find((item) => item.title === title);
-//     if (vdo) {
-//       return vdo.youtube_embed_link;
-//     }
-//   }
-//   return null;
-// }

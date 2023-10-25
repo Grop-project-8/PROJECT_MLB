@@ -6,16 +6,18 @@ import Userinfo from "./Userinfo/Userinfo";
 import Continued from "./Continued/Continued";
 import Browser from "./Browser/Browser";
 import { ContextProvider } from '../../Function/useContext'
-import { getuser } from "../../Function/userRouter";
 import { AiOutlineSetting } from "react-icons/ai";
 import { GrFormPrevious } from "react-icons/gr";
 import SetForm from "./Setting/Setting";
 import { Chartduration } from "./Chart/Chartduration";
 import Temp from "./Temp/Temp";
+import {getuser} from '../../Function/userRouter'
 
 const Userprofile = () => {
-  // const [userData, setUserData] = useState(null);
-  const { userData ,setUserData } = useContext(ContextProvider);
+
+  const [user, setUser] = useState(null);
+  const {  userData } = useContext(ContextProvider); 
+
 
   // console.log('uesr',userData)
   const goBack = () => {
@@ -26,7 +28,7 @@ const Userprofile = () => {
     const fetchData = async () => {
       try {
         const response = await getuser();
-        setUserData(response.data);
+        setUser(response.data);
       } catch (error) {
         console.error("Error fetching data", error);
       }
@@ -46,18 +48,17 @@ const Userprofile = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 relative">
+    <div className="container mx-auto px-4 ">
       {/* <div className="flex justify-between	mt-5text-[30px]" >
       <GrFormPrevious onClick={goBack} />
       </div> */}
 
       <div className="lg:flex lg:space-x-10 ">
         <div className="bg-slate-400 p-4 rounded-xl w-auto lg:w-1/2 shadow-xl flex items-center shadow-[#999999] relative">
-          <Userinfo userData={userData} toggleDashboard={toggleDashboard} />
+          <Userinfo userData={user} toggleDashboard={toggleDashboard} />
         </div>
       <Temp/>
-
-      <span className="absolute top-0 right-0 flex text-[1.75rem] items-start">Setting <AiOutlineSetting onClick={setform} /></span>
+      {/* <span className="absolute top-0 right-0 flex text-[1.75rem] items-start">Setting <AiOutlineSetting onClick={setform} /></span> */}
 
       </div>
 
@@ -67,7 +68,7 @@ const Userprofile = () => {
       </div>
 
       
-      {showsetform ? ( <SetForm setform={setform} />) : (null) }
+      {showsetform ? ( <SetForm seform ={setform} />) : (null) }
 
 
     </div>
