@@ -32,12 +32,8 @@ const FeedSection = ({
     });
   };
 
-
-  /* const date = new Date(createAt);
-  const options = { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZoneName: 'short' }; */
   const formattedDate = moment(createAt).startOf('hour').fromNow();
 
-  console.log(formattedDate);
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -45,7 +41,6 @@ const FeedSection = ({
 
   const handleSaveClick = async (e) => {
     setIsEditing(false);
-    
     Swal.fire({
       title: 'Do you want to save the changes?',
       showDenyButton: true,
@@ -58,11 +53,9 @@ const FeedSection = ({
         updated(updatedData)
           .then((res) => {
             Swal.fire('Saved!', '', 'success');
-            console.log(res.data);
             window.location.reload();
           })
           .catch((err) => {
-            console.log(err);
             Swal.fire('Error', 'Failed to save changes', 'error');
           });
       } else if (result.isDenied) {

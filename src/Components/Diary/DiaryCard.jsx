@@ -87,16 +87,7 @@ const DiaryCard = () => {
           .catch((err) => console.log(err));
       };
 
-      /* const handleUpdate = async (id,data) => {
-        console.log(id,data);
-        update(id,feed)
-            .then(res => {
-            console.log(res.data);
-            loadData();
-          })
-          .catch((err) => console.log(err));
-      } */
-      /* console.log(data); */
+      
 
   return (
     <div className='lg:grid grid-cols-2 '>
