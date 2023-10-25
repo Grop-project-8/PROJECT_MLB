@@ -99,7 +99,7 @@ function Login() {
           <Link to='/repass'>
             <p className="text-gray-500 text-left">forget password</p>
           </Link>
-          <button className="2xl:text-sm text-xs bg-myGreen px-2 py-2 mt-4 rounded-[12px] w-[40%] ">
+          <button className="2xl:text-sm text-xs hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 px-2 py-2 mt-4 rounded-[12px] w-[40%] ">
             Login
           </button>
         </form>
