@@ -19,6 +19,7 @@ const EditForm = ({ Editform, data }) => {
     Editform();
   };
 
+
   const handleChange = (e) => {
     setValue({
       ...value,
@@ -39,6 +40,12 @@ const EditForm = ({ Editform, data }) => {
     });
 
     if (result.isConfirmed) {
+      if(value.height < 1 || value.weight < 1){
+        return  toast.warning("คนหรือกระดาษค้าบ");
+      }
+      if(value.height > 250 || value.weight > 200){
+        return  toast.warning("พี่สูงมากกว่า 250 อีกหรอ !! หรือ พี่หนักกว่า 200 อีกหรอ !!");
+      }
       try {
         const res = await updateProfile({
           height: value.height,
@@ -47,6 +54,7 @@ const EditForm = ({ Editform, data }) => {
         setSuccess(prev => !prev)
         Editform();
         toast.success(res.data);
+        location.reload()
       } catch (error) {
         console.error("Error occurred while updating data", error);
         toast.error("Failed to update data");
@@ -93,7 +101,7 @@ const EditForm = ({ Editform, data }) => {
                 placeholder="Enter weight"
                 value={value.weight}
                 onChange={handleChange}
-                min="1"
+                min={1}
                 max="250"
               />
             </div>

@@ -60,20 +60,26 @@ const DiaryCard = () => {
   };
 
   const handleSubmit = async (e) => {
-    create(feed) // จะรับข้อมูลที่ Submit มาจาก Form
-      .then((res) => {
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Post Success",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        loadData();
-      })
-      .catch((err) => console.log(err));
+    if (feed.duration < 1 || feed.duration > 1440) {
+      toast.warning("เวลาผิดพลาด");
+      return;
+    }
+    try {
+      await create(feed);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Post Success",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      loadData();
+    } catch (err) {
+      console.log(err);
+    }
     e.preventDefault();
   };
+  
 
   const handleRemove = async (id) => {
     removed(id)
@@ -157,6 +163,8 @@ const DiaryCard = () => {
                 value={feed.duration}
                 onChange={handleChange}
                 required
+                min={1}
+                max={1440}
               />
               <label className="p-3 mt-3 font-bold">Minute</label>
 
