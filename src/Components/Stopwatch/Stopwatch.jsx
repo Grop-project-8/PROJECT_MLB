@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import { GrFormPrevious } from "react-icons/gr";
 
 
 class Stopwatch extends Component {
@@ -52,12 +53,21 @@ class Stopwatch extends Component {
     return minutes
   }
 
+
   render() {
     const {isTimerRunning} = this.state
     const time = `${this.renderMinutes()}:${this.renderSeconds()}`
+    const goBack = () => {
+      window.history.back();
+    };
 
     return (
-      <div className='mt-36' >
+      <>
+      <GrFormPrevious
+      onClick={goBack}
+      className="lg:text-[60px] text-[40px] m-4"
+    /> 
+      <div className='mt-24' >
         <div className='flex justify-center mx-4' >
           <p className='text-[48px]'>Stopwatch</p>
         </div>
@@ -70,7 +80,7 @@ class Stopwatch extends Component {
 
 <br />
         <div className='flex justify-center mx-8' >
-              <button className="bg-myGreen  text-black rounded-[10px] justify-center p-4 mx-4"
+              <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 rounded-[10px] justify-center p-4 mx-4"
                 type="button"
                
                 onClick={this.onStartTimer}
@@ -79,7 +89,7 @@ class Stopwatch extends Component {
                 Start
               </button>
 
-              <button className="bg-myGreen  text-black rounded-[10px] justify-center p-4 mx-4"
+              <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 rounded-[10px] justify-center p-4 mx-4"
                 type="button"
                 
                 onClick={this.onStopTimer}
@@ -87,7 +97,7 @@ class Stopwatch extends Component {
                 Stop
               </button >
 
-              <button className="bg-myGreen  text-black rounded-[10px] justify-center p-4 mx-4"
+              <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 rounded-[10px] justify-center p-4 mx-4"
                 type="button"
                 
                 onClick={this.onResetTimer}
@@ -96,6 +106,7 @@ class Stopwatch extends Component {
               </button>
             </div>
       </div>
+      </>
     ) 
   }
 }
