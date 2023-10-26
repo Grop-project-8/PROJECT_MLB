@@ -73,6 +73,8 @@ const EditForm = ({ Editform, data }) => {
                 name="height"
                 placeholder="Enter height"
                 value={value.height}
+                min="1"
+                max="250"
                 onChange={handleChange}
               />
             </div>
@@ -91,6 +93,8 @@ const EditForm = ({ Editform, data }) => {
                 placeholder="Enter weight"
                 value={value.weight}
                 onChange={handleChange}
+                min="1"
+                max="250"
               />
             </div>
             <div className="flex items-center justify-between">
