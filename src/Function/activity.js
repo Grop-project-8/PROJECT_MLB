@@ -17,3 +17,11 @@ export const updated = async (data) => {
         withCredentials: true,
     })
 }
+
+/* export const getActivityName = async (data) => {
+    return await axios.post(import.meta.env.VITE_REACT_API_URL+'diarycard',{
+        "type":data   
+    },{
+        withCredentials: true,
+    })
+} */
