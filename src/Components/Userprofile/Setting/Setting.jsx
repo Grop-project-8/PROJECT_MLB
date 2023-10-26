@@ -52,7 +52,7 @@ const SetForm = ({ setform }) => {
           });
           setform();
           toast.success(res.data.message);
-          setSuccess(!success)
+          window.location.reload()
         } catch (error) {
           console.error('Failed to update password', error);
           toast.error('Failed to update password');

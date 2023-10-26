@@ -95,7 +95,7 @@ const WeatherApp = () => {
           </div>
           <div className="text-center flex-col items-center">
             <div>
-              <p className="text-sm">{weatherData.wind.speed} km/h</p>
+              <p className="text-sm font-sans font-bold">{weatherData.wind.speed} km/h</p>
               <p>Wind Speed</p>
             </div>
           </div>

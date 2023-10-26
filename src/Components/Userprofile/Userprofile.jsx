@@ -64,7 +64,7 @@ const Userprofile = () => {
       </div>
 
       
-      {showsetform ? ( <SetForm seform ={setform} setSuccess={setSuccess}/>) : (null) }
+      {showsetform ? ( <SetForm seform = {setform} setSuccess={setSuccess}/>) : (null) }
 
 
     </div>
