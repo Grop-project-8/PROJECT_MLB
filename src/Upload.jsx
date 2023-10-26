@@ -40,7 +40,7 @@ const Upload = ({userData}) => {
           // console.log(res);
         }).catch(err => {
           console.log(err);
-          setIsLoading(false); // หยุดโหลดหากเกิดข้อผิดพลาด
+          setIsLoading(false); 
         });
         console.log(uri);
       },

@@ -48,14 +48,14 @@ export const activities = [
                 title: "15 MIN DANCE PARTY WORKOUT",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/1vRto-2MMZo/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
             },
             {
                 youtube_embed_link: "hhttps://www.youtube.com/embed/U0u1-X8yZ48",
                 title: "14 Minute Seated Dance Workout To Improve Upper Body Coordination",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/HBhVZpX4JZw/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
             {
@@ -63,7 +63,7 @@ export const activities = [
                 title: "10 Minute Leg Burner | HIIT Dance",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/jKTxe236-4U/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
             {
@@ -71,7 +71,7 @@ export const activities = [
                 title: "20 Minute Intermediate Pop Music Dance Workout",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/bre1FJR0ggo/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
             {
@@ -79,7 +79,7 @@ export const activities = [
                 title: "BTS Full Body Dance Workout",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/RFfbZV3bwys/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
         ],
@@ -92,14 +92,14 @@ export const activities = [
                 title: "15 MIN DANCE PARTY WORKOUT",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/1vRto-2MMZo/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
             },
             {
                 youtube_embed_link: "hhttps://www.youtube.com/embed/U0u1-X8yZ48",
                 title: "14 Minute Seated Dance Workout To Improve Upper Body Coordination",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/HBhVZpX4JZw/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
             {
@@ -107,7 +107,7 @@ export const activities = [
                 title: "10 Minute Leg Burner | HIIT Dance",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/jKTxe236-4U/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
             {
@@ -115,7 +115,7 @@ export const activities = [
                 title: "20 Minute Intermediate Pop Music Dance Workout",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/bre1FJR0ggo/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
             {
@@ -123,27 +123,27 @@ export const activities = [
                 title: "BTS Full Body Dance Workout",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/RFfbZV3bwys/mqdefault.jpg",
-                type: "Dance",
+                type: "Dancing",
 
             },
         ],
     },
     {
-        actType: 'JumpingRope',
+        actType: 'Jumping rope',
         actName: [
             {
                 youtube_embed_link: "https://www.youtube.com/embed/kDOGb9C5kp0",
                 title: "How To Start Jumping Rope | Beginner Guide",
                 equipment: "rope",
                 thumbnail: "https://i1.ytimg.com/vi/kDOGb9C5kp0/mqdefault.jpg",
-                type: "JumpingRope",
+                type: "jumpingRope",
             },
             {
                 youtube_embed_link: "https://www.youtube.com/embed/1-KvIEU03yc",
                 title: "Learn The Jump Rope Boxer Skip In 5 Easy Steps",
                 equipment: "rope",
                 thumbnail: "https://i1.ytimg.com/vi/1-KvIEU03yc/mqdefault.jpg",
-                type: "JumpingRope",
+                type: "jumpingRope",
 
             },
             {
@@ -151,7 +151,7 @@ export const activities = [
                 title: "10 Min Beginner Jump Rope Workout",
                 equipment: "rope",
                 thumbnail: "https://i1.ytimg.com/vi/1BZM2Vre5oc/mqdefault.jpg",
-                type: "JumpingRope",
+                type: "jumpingRope",
 
             },
             {
@@ -159,7 +159,7 @@ export const activities = [
                 title: "How To Jump Rope Like A Boxer",
                 equipment: "rope",
                 thumbnail: "https://i1.ytimg.com/vi/9qosVFBphcg/mqdefault.jpg",
-                type: "JumpingRope",
+                type: "jumpingRope",
 
             },
             {
@@ -167,7 +167,7 @@ export const activities = [
                 title: "How to Jump Rope | Beginner Tutorial from Crossrope",
                 equipment: "rope",
                 thumbnail: "https://i1.ytimg.com/vi/T_tVMJEkUpg/mqdefault.jpg",
-                type: "JumpingRope",
+                type: "jumpingRope",
 
             },
         ],
