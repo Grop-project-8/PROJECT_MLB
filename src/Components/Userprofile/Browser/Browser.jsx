@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css";
 import { Chartduration } from "../Chart/Chartduration";
 import Dashboard from "../../Dashboard/Dashboard";
-import Barchart from "../Chart/Barchart";
+import Barduration from "../Chart/Barduration";
 
 const Browser = ({ userData }) => {
   return (
@@ -26,7 +26,7 @@ const Browser = ({ userData }) => {
             <Chartduration />
           </SwiperSlide>
           <SwiperSlide>
-            <Barchart />
+            <Barduration />
           </SwiperSlide>
           <SwiperSlide>
             <Dashboard userData={userData} />
@@ -36,7 +36,7 @@ const Browser = ({ userData }) => {
        
        <div className="hidden lg:flex justify-between">
           <Chartduration />
-          <Barchart />
+          <Barduration />
           <Dashboard userData={userData} />
         </div>
       </div>

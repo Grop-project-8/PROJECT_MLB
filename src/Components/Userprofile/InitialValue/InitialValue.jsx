@@ -7,7 +7,7 @@ const InitialValue = () => {
   useEffect(() => {
     const percentage = (kcalBurned / goalKcal) * 100;
     // แสดงค่าเปอร์เซ็นต์ใน Console
-    console.log(`เปอร์เซ็นต์: ${percentage.toFixed(2)}%`);
+    // console.log(`เปอร์เซ็นต์: ${percentage.toFixed(2)}%`);
   }, [goalKcal, kcalBurned]);
 
   const tubeStyle = {

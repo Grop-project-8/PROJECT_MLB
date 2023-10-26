@@ -7,8 +7,7 @@ import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 import Swal from 'sweetalert2';
-/* import { getuser } from '../../Function/userRouter'
- */
+
 import moment from 'moment'
 
 const FeedSection = ({
@@ -83,7 +82,7 @@ const FeedSection = ({
                 />
           </div>
           <div className='mx-4 my-2'>
-            <h3 className='font-bold text-xs'>{userData.username}</h3>
+            <h3 className='font-bold text-xs'>{userData && userData.username}</h3>
             <p className='text-[12px]'>{formattedDate}</p> 
           </div>
           <div className='ml-auto flex items-center'>

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { GrFormPrevious } from "react-icons/gr";
-import login1 from '../../assets/login/login1.svg'
+import login1 from '../../assets/login/login1.jpg'
 
 function Login() {
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ function Login() {
           // cookies.set("token", res.data.token, { expires: 3600 });
           roleRedirect(res.data.payload.role);
         } else {
-          console.log("Invalid response format:", res.data);
+          toast.error("Invalid response format:", res.data);
         }
       })
       .catch((err) => {

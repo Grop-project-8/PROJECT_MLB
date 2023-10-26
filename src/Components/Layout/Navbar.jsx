@@ -96,12 +96,6 @@ const Navbar = () => {
           <Link to="/activity" className="2xl:text-sm text-xs">
             Activity
           </Link>
-          <Link to="https://colmar-codeacademy.vercel.app/" className="2xl:text-sm text-xs">
-            Article
-          </Link>
-          <Link to="/contact" className="2xl:text-sm text-xs">
-            Contact
-          </Link>
         </div>
       )}
 
@@ -113,9 +107,6 @@ const Navbar = () => {
           </li>
           <li className="2xl:text-sm text-xs  hover:scale-105 duration-150">
             <Link to="/activity">Activity</Link>
-          </li>  
-          <li className="2xl:text-sm text-xs hover:scale-105 duration-150">
-            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

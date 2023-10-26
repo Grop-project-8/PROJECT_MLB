@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Home1 from '../../assets/hero/Home.svg'
+import Home1 from '../../assets/hero/Home.jpg'
 
 
 function Home() {

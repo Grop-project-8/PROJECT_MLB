@@ -9,7 +9,6 @@ const UserRoute = ({ children }) => {
   
   const [isLoading, setIsLoading] = useState(true);
 
-  // const { isLoggedIn ,setIsLoggedIn } = useContext(ContextProvider);
 
   useEffect(() => {
     const fetchData = async () => {
