@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { register } from "../../Function/auth";
 import { useState } from "react";
 import {GrFormPrevious} from 'react-icons/gr'
-import weight from '../../assets/login/weight.jpg'
+import weight from '../../assets/login/weight.svg'
 
 
 
@@ -69,6 +69,7 @@ function Register() {
         <img
           src={logo}
           alt="register-logo"
+          loading='lazy'
           className="w-[50%] absolut  top-5 "
         />
         <h1 className="2xl:text-2xl xl:text-xl lg:text-lg text-sm">Register</h1>
@@ -140,6 +141,7 @@ function Register() {
       <div className="hidden lg:inline w-[100%]">
         <img
           src={weight}
+          loading='lazy'
           alt="image-register"
           className="object-cover h-screen  object-top md:w-full rounded-lg"
         />

@@ -5,7 +5,7 @@ import EditForm from "../Userform/Userform";
 import { createImage } from '../../../Function/userRouter'
 import Upload from "../../../Upload";
 
-const Userinfo = ({ userData,toggleDashboard }) => {
+const Userinfo = ({ userData,toggleDashboard ,setSuccess}) => {
 
   const [showEditform, setShowEditform] = useState(false);
 
@@ -36,7 +36,7 @@ const Userinfo = ({ userData,toggleDashboard }) => {
     <div className="w-full  md:flex items-center justify-around	 ">
       <div className="">
        
-        <Upload userData={userData}/>
+        <Upload userData={userData} />
         
         <div className="text-center mt-2">
             <button onClick={Editform} >

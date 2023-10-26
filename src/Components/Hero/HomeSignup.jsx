@@ -1,4 +1,4 @@
-import homesign from '../../assets/hero/homesign.jpg'
+import homesign from '../../assets/hero/homesign.svg'
 import { Link } from 'react-router-dom'
 
 function HomeSignup() {

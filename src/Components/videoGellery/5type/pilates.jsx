@@ -1,6 +1,5 @@
 import React from 'react'
 import VideoCard from '../VideoCard'
-import vid_list from '../vid_list'
 import { useNavigate } from 'react-router-dom'
 import { GrFormPrevious } from "react-icons/gr";
 import { useState, useEffect } from 'react';

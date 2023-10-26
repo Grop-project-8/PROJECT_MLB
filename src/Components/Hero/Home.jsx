@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import Home1 from '../../assets/hero/Home.jpg'
+import Home1 from '../../assets/hero/Home.svg'
+
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
         <img
           src={Home1}
           alt="Image-hero"
+          loading='lazy'
           className="object-cover w-full md:w-[100%] lg:w-full xl:w-full opacity-60 h-auto"
         />
       </div>
@@ -16,7 +18,7 @@ function Home() {
           <h1 className="2xl:text-2xl xl:text-xl lg:text-md text-[1.1rem] md:text-[1.5rem] lg:w-[100%] mt-2 md:text-white">
             Transform Your Health Quick Workouts for Busy Lives
           </h1>
-          <p className="md:text-white font-poppins lg:text-md  2xl:text-lg text-[1rem] md:text-[1.5rem] mt-2">
+          <p className="md:text-white font-poppins lg:text-md  2xl:text-2xl text-[1.1rem] md:text-[1.5rem] mt-2">
               Defeat Office Syndrome with 
             </p>
             <span className='text-myGreen lg:text-[60px] md:text-[30px] text-sm'>Move-Life</span> <span className='text-yellow-300 lg:text-[60px] md:text-[30px] text-sm'>Balance!</span>
