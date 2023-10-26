@@ -48,14 +48,14 @@ export const activities = [
                 title: "15 MIN DANCE PARTY WORKOUT",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/1vRto-2MMZo/mqdefault.jpg",
-                type: "Dancing",
+                type: "BodyWeight",
             },
             {
                 youtube_embed_link: "hhttps://www.youtube.com/embed/U0u1-X8yZ48",
                 title: "14 Minute Seated Dance Workout To Improve Upper Body Coordination",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/HBhVZpX4JZw/mqdefault.jpg",
-                type: "Dancing",
+                type: "BodyWeight",
 
             },
             {
@@ -63,7 +63,7 @@ export const activities = [
                 title: "10 Minute Leg Burner | HIIT Dance",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/jKTxe236-4U/mqdefault.jpg",
-                type: "Dancing",
+                type: "BodyWeight",
 
             },
             {
@@ -71,7 +71,7 @@ export const activities = [
                 title: "20 Minute Intermediate Pop Music Dance Workout",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/bre1FJR0ggo/mqdefault.jpg",
-                type: "Dancing",
+                type: "BodyWeight",
 
             },
             {
@@ -79,13 +79,13 @@ export const activities = [
                 title: "BTS Full Body Dance Workout",
                 equipment: "none",
                 thumbnail: "https://i1.ytimg.com/vi/RFfbZV3bwys/mqdefault.jpg",
-                type: "Dancing",
+                type: "BodyWeight",
 
             },
         ],
     },
     {
-        actType: 'Dance',
+        actType: 'Dancing',
         actName: [
             {
                 youtube_embed_link: "https://www.youtube.com/embed/1vRto-2MMZo",
