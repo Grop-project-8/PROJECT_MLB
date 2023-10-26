@@ -29,7 +29,7 @@ const Upload = ({userData}) => {
       100,
       0,
       (uri) => {
-        axios.post("http://localhost:8000/createImage", {
+        axios.post(import.meta.env.VITE_REACT_API_URL+"createImage", {
           image: uri,
         }, {
           withCredentials: true,
