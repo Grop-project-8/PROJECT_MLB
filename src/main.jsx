@@ -69,7 +69,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/activity",
-    element: <VideoGellery/>,
+    element: (<Layout> <VideoGellery/> </Layout>),
   },
   {
     path: "/DiaryCary",

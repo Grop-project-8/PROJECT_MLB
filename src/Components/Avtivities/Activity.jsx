@@ -43,25 +43,25 @@ const Activity = () => {
               <div className='flex w-full justify-center items-center '>
 
                 <Link to = '/yoga'>
-                <img src= {Yoga} alt="Image-yoga" className='rounded-2xl  mx-3 shadow-xl'/>
+                <img src= {Yoga} alt="Image-yoga" className='rounded-2xl  mx-3 shadow-xl hover:scale-105 duration-300'/>
                 </Link>
                 
                 <Link to = '/bodyweight'>
-                <img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl  mx-3 shadow-xl' />
+                <img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl  mx-3 shadow-xl hover:scale-105 duration-300' />
                 </Link>
 
                 <Link to = '/dance'>
-                <img src= {Dance} alt="Image-Dance" className='rounded-2xl  mx-3 shadow-xlshadow-xl'/>
+                <img src= {Dance} alt="Image-Dance" className='rounded-2xl  mx-3 shadow-xlshadow-xl hover:scale-105 duration-300'/>
                 </Link>
               </div>
               <div className='flex w-full justify-center items-center'>
 
               <Link to = '/jumpingrope'>
-                <img src= {JumpingRope} alt="Image-JumpingRope" className='rounded-2xl  mx-3 shadow-xl'/>
+                <img src= {JumpingRope} alt="Image-JumpingRope" className='rounded-2xl  mx-3 shadow-xl hover:scale-105 duration-300'/>
                 </Link>
 
                 <Link to = '/pilates'>
-                <img src= {Pilates} alt="Image-Pilates" className='rounded-2xl  mx-3 shadow-xl'/> 
+                <img src= {Pilates} alt="Image-Pilates" className='rounded-2xl  mx-3 shadow-xl hover:scale-105 duration-300'/> 
                 </Link>
               </div>
             </div> 

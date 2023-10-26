@@ -19,7 +19,7 @@ const Login_mobile = () => {
           />
         </div>
       </div>
-      <button className="bg-myGreen  text-black  py-2 px-4 rounded self-center">
+      <button className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150  py-2 px-4 rounded self-center">
         Log in
       </button>
       <br />

@@ -102,10 +102,10 @@ const Navbar = () => {
       {/* Desktop */}
       <div className="my-auto hidden lg:block">
         <ul className="flex space-x-4">
-          <li className="2xl:text-sm text-xs">
+          <li className="2xl:text-sm text-xs  hover:scale-105 duration-150">
             <Link to="/">Home</Link>
           </li>
-          <li className="2xl:text-sm text-xs">
+          <li className="2xl:text-sm text-xs  hover:scale-105 duration-150">
             <Link to="/activity">Activity</Link>
           </li>
         </ul>
@@ -127,10 +127,10 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="flex items-center space-x-3">
-              <li className="2xl:text-sm text-xs">
+              <li className="2xl:text-sm text-xs hover:scale-105 duration-150">
                 <Link to="/login">Login</Link>
               </li>
-              <li className="2xl:text-sm text-xs bg-myGreen px-2 py-2 rounded-[12px] w-[100%]">
+              <li className="2xl:text-sm text-xs hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 px-2 py-2 rounded-[12px] w-[100%]">
                 <Link to="/sign">Sign up</Link>
               </li>
             </div>

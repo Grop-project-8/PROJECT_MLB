@@ -20,7 +20,7 @@ function HomeSignup() {
             <div className='flex items-center justify-center md:mb-1 max-[639px]:mb-2'>
               <Link
                 to='/sign'
-                className='bg-myGreen  md:p-3 p-2 mb-2 rounded-xl 2xl:text-md sm:text-md sm:w-3/3  lg:text-md text-center md:w-3/3 shadow-xl md:text-sm block lg:w-1/3   '
+                className='md:p-3 p-2 mb-2 rounded-xl 2xl:text-md sm:text-md sm:w-3/3  lg:text-md text-center md:w-3/3 shadow-xl md:text-sm block lg:w-1/3 hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150  '
               >
                 Sign up here
               </Link>

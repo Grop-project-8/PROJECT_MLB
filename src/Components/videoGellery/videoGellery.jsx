@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import VideoCard from './VideoCard';
-import {AiOutlineArrowLeft} from "react-icons/ai";
+import { GrFormPrevious } from "react-icons/gr";
 import {Link} from 'react-router-dom'
 import axios, { all } from 'axios';
 
@@ -23,7 +23,9 @@ import axios, { all } from 'axios';
       console.log(error)
     }
   }
-
+  const goBack = () => {
+    window.history.back();
+  };
 
   
   const clickShowAll = () =>{
@@ -35,11 +37,41 @@ import axios, { all } from 'axios';
   const displayVid = showAll ? allVideo : allVideo.slice(0, 8)
 
   return (<>
-  <div className='static pl-2'>
+  
+ 
 
+  <div className='static pl-2'>
+  <GrFormPrevious
+        onClick={goBack}
+        className="lg:text-[60px] text-[40px] m-4 inline-block"
+      />
     <p className='inline-block text-myGray font-poppins  2xl:text-sm text-xs pl-[5px]'>All videos</p>
+  </div  >
+    
+
+    <div className='flex flex-row gap-4 w-full justify-center'>
+      <Link to="/yoga">
+      <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px]  transition duration-300 ease-in-out hover:bg-yellow-400'> Yoga</button>
+      
+      </Link>
+
+      <Link to='/bodyweight'>
+      <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px] transition duration-300 ease-in-out hover:bg-yellow-400'> Body Weight</button>
+      </Link>
+    
+      <Link className="/pilates">
+      <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px] transition duration-300 ease-in-out hover:bg-yellow-400'> Pilates</button>
+      </Link>
+    
+    <Link to="/jumpingrope">
+    <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px] transition duration-300 ease-in-out hover:bg-yellow-400'> Jumping Rope</button>
+    </Link>
    
-  </div>
+   <Link to='/dance'>
+   <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px] transition duration-300 ease-in-out hover:bg-yellow-400'> dance</button>
+   </Link>
+    
+    </div>
 
     <br />
     <div className=' p-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center mx-1 gap-4'>

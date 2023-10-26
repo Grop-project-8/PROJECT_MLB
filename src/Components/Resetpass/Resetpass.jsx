@@ -90,7 +90,7 @@ export default function ForgotPassword() {
                 setEmailConfirmed(true);
               }}
               disabled={loading} // ป้องกันการคลิกขณะโหลด
-              className="bg-myGreen text-black  py-2 px-4 rounded self-center"
+              className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-110 duration-300  py-2 px-4 rounded self-center"
             >
               Confirm E-mail
             </button>
@@ -124,7 +124,7 @@ export default function ForgotPassword() {
             <button
               onClick={handleChangePassword}
               disabled={loading} // ป้องกันการคลิกขณะโหลด
-              className="bg-myGreen text-black  py-2 px-4 rounded self-center"
+              className="hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150 py-2 px-4 rounded self-center"
             >
               Change Password
             </button>
