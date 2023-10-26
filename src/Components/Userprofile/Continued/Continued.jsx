@@ -19,7 +19,7 @@ const Continued = () => {
 
   const getData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/findlastVideo", {
+      const response = await axios.get(import.meta.env.VITE_REACT_API_URL+"findlastVideo", {
         withCredentials: true,
       });
       const sortedData = response.data.videos.reverse();
