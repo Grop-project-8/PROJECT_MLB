@@ -5,7 +5,7 @@ export default function VideoCard({ videoId, title, img }) {
 
   const handleVideoClick = async () => {
     try {
-      await axios.post("http://localhost:8000/addlastVideo", { videoId: videoId }, { withCredentials: true });
+      await axios.post(import.meta.env.VITE_REACT_API_URL+"addlastVideo", { videoId: videoId }, { withCredentials: true });
     } catch (error) {
       console.error("Error sending video ID:", error);
     }

@@ -13,7 +13,6 @@ const Dashboard = ({userData}) => {
     return date instanceof Date ? moment(date).format("YYYY-MM-DD") : "";
   };
 
-  // const [loginData] = useState(mockLoginData);
   const loginData = userData ? userData.loginTimes.map(time => new Date(time)) : [];
 
   const [selectedDate, setSelectedDate] = useState(new Date());

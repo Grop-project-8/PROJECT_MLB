@@ -5,6 +5,7 @@ import { updated } from "../../Function/activity";
 import { Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import Swal from 'sweetalert2';
+
 import moment from 'moment'
 
 const FeedSection = ({
@@ -90,9 +91,12 @@ const FeedSection = ({
                   alt="User Profile"
                 />
           </div>
+
+
+
           <div className='mx-2 my-2'>
-            <h3 className='font-bold text-xs'>username</h3>
-            <p className='sm:text-[14px] max-[425px]:text-[11px] '>{formattedDate}</p> 
+            <h3 className='font-bold text-xs'>{userData && userData.username}</h3>
+           <p className='sm:text-[14px] max-[425px]:text-[11px] '>{formattedDate}</p>
           </div>
           <div className='ml-auto flex items-center'>
               <BiSolidEditAlt className='hover: cursor-pointer scale-500 duration-300' size={30} onClick={handleEditClick} />

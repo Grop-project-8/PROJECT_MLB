@@ -12,7 +12,6 @@ import "swiper/css";
 
 const Continued = () => {
   const [vdoContinued, setVdoContinued] = useState([]);
-  console.log(vdoContinued);
 
   useEffect(() => {
     getData();
@@ -35,7 +34,7 @@ const Continued = () => {
       <div className="  ">
         <div className="w-auto  lg:text-end">
           <div className="lg:text-[1.5rem] bg-myGreen py-2 rounded-[12px]  text-center">
-            recent activity
+            recently watched videos
           </div>
         </div>
 

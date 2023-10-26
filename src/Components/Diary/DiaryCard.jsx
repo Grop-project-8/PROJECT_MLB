@@ -77,6 +77,7 @@ const DiaryCard = () => {
 
   const handleRemove = async (id) => {
     removed(id)
+
       .then(res => {
         Swal.fire({
           position: "top-end",
@@ -89,6 +90,7 @@ const DiaryCard = () => {
       })
       .catch((err) => console.log(err));
   };
+
  
 
   return (

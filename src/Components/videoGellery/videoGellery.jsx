@@ -16,7 +16,7 @@ import axios, { all } from 'axios';
 
   const getData = async() =>{
     try {
-      const response = await axios.get('http://localhost:8000/getyoga');
+      const response = await axios.get(import.meta.env.VITE_REACT_API_URL+'getyoga');
       setAllVideo(response.data)
       console.log('fdgdfg', response.data)
     } catch (error) {

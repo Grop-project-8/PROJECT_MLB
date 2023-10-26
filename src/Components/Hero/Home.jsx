@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Home1 from '../../assets/hero/Home.svg'
+import Home1 from '../../assets/hero/Home.jpg'
 
 
 function Home() {
@@ -26,7 +26,7 @@ function Home() {
       </div>
 
       <div className="md:absolute lg:bottom-20 md:bottom-10 flex justify-center w-full mt-2">
-            <Link to='/activity' className="bg-myGreen  p-3 rounded-[12px] sm:w-3/3 2xl:text-md lg:text-md text-center md:w-3/3 shadow-xl md:text-sm lg:w-1/3">
+            <Link to='/activity' className=" p-3 rounded-[12px] sm:w-3/3 2xl:text-md lg:text-md text-center md:w-3/3 shadow-xl md:text-sm lg:w-1/3 hover:text-[#fff565] bg-[#9ffc41]  hover:scale-105 duration-150">
               Try Workout
             </Link>
           </div>
