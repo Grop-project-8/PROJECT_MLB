@@ -26,8 +26,6 @@ const Activity = () => {
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                // onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
               >
                 <SwiperSlide > <Link to = '/yoga'><img src= {Yoga} alt="Image-yoga" className='rounded-2xl w-[100%] shadow-xl'/></Link></SwiperSlide>
                 <SwiperSlide ><Link to = '/bodyweight'><img src= {BodyWeight} alt="Image-BodyWeight" className='rounded-2xl w-[100%] shadow-xl' /></Link></SwiperSlide>

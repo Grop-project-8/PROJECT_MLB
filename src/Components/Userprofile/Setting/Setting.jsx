@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { toast } from "react-toastify";
 import { updatePassword } from "../../../Function/userRouter";
 import Swal from 'sweetalert2';
+import { ContextProvider } from '../../../Function/useContext'
 
 
 const SetForm = ({ setform }) => {
   
+
+  const {  success,userData,setSuccess } = useContext(ContextProvider); 
+
+
   const [value, setValue] = useState({
     oldPassword: "",
     newPassword: "",
@@ -47,6 +52,7 @@ const SetForm = ({ setform }) => {
           });
           setform();
           toast.success(res.data.message);
+          setSuccess(!success)
         } catch (error) {
           console.error('Failed to update password', error);
           toast.error('Failed to update password');

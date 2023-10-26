@@ -79,9 +79,8 @@ export default function BarsDataset() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/getUserdata',{ withCredentials: true });
+        const response = await axios.get(import.meta.env.VITE_REACT_API_URL+'getUserdata',{ withCredentials: true });
         setData(response.data);
-        console.log('test',response.data);
       } catch (error) {
         console.error('Error fetching data', error);
       }

@@ -12,7 +12,6 @@ import "swiper/css";
 
 const Continued = () => {
   const [vdoContinued, setVdoContinued] = useState([]);
-  console.log(vdoContinued);
 
   useEffect(() => {
     getData();

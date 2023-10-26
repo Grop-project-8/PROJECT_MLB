@@ -44,7 +44,7 @@ function Login() {
           // cookies.set("token", res.data.token, { expires: 3600 });
           roleRedirect(res.data.payload.role);
         } else {
-          console.log("Invalid response format:", res.data);
+          toast.error("Invalid response format:", res.data);
         }
       })
       .catch((err) => {

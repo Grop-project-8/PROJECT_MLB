@@ -16,11 +16,10 @@ Chart.register(Colors);
 export const Chartduration = () => {
 
   const [chartData, setChartData] = useState({});
-  console.log("chartData",chartData);
 
   useEffect(() => {
     const fetchData = async () => {
-      const apiUrl = "http://localhost:8000/getUserperday";
+      const apiUrl = import.meta.env.VITE_REACT_API_URL+"getUserperday";
       try {
         const response = await axios.get(apiUrl, { withCredentials: true });
         const data = response.data;
@@ -61,7 +60,7 @@ const data = {
 
   return (
     <>
-      <div className="w-[300px] lg:w-[350px] lg:mx-0 mx-auto rounded ">
+      <div className="w-[300px] lg:w-[300px] lg:mx-0 mx-auto rounded ">
         <div className="text-cent  justify-center m-auto">
         <Doughnut data={data} />
         </div>

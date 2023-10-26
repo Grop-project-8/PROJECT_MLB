@@ -73,7 +73,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/DiaryCary",
-    element: <DiaryCary />,
+    element:(<UserRoute>
+      <DiaryCary />
+    </UserRoute>
+      
+    )
   },
   {
     path: "/sign",
