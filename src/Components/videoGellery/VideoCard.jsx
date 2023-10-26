@@ -12,7 +12,6 @@ export default function VideoCard({ videoId, title, img }) {
   };
   
 
-
   return (
     <div onClick={handleVideoClick} >
       <div className=" h-[350px]  bg-gray-200 rounded-[10px]">

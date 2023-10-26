@@ -38,6 +38,7 @@ const Navbar = () => {
       const logout = await logOut();
       toast("Log out");
       setIsLoggedIn(logout.data.isLoggedIn);
+      CookieManager.clearAll();
       navigate("/");
     } catch (err) {
       console.error("Error logging out:", err);

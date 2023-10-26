@@ -59,7 +59,7 @@ import axios, { all } from 'axios';
       <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px] transition duration-300 ease-in-out hover:bg-yellow-400'> Body Weight</button>
       </Link>
     
-      <Link className="/pilates">
+      <Link to="/pilates">
       <button className='bg-myGreen w-[150px] h-[100px] rounded-[15px] transition duration-300 ease-in-out hover:bg-yellow-400'> Pilates</button>
       </Link>
     
