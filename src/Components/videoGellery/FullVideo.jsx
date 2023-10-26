@@ -12,7 +12,7 @@ import axios from 'axios';
 
   const handleVideoClick = async (videoId) => {
     try {
-      await axios.post("http://localhost:8000/addlastVideo", { videoId: videoId });
+      await axios.post(import.meta.env.VITE_REACT_API_URL+"addlastVideo", { videoId: videoId });
     } catch (error) {
       console.error("Error sending video ID:", error);
     }
@@ -20,7 +20,7 @@ import axios from 'axios';
 
   const getVideo = async (id)=>{
 try {
-  const response = await axios.get(`http://localhost:8000/getyoga/${id}`)
+  const response = await axios.get(`${import.meta.env.VITE_REACT_API_URL}getyoga/${id}`);
   setYogaVideo(response.data)
 } catch (error) {
   console.log(error)

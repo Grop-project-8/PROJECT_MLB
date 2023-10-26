@@ -10,10 +10,8 @@ const JumpingRope = () => {
   const goBack = () => {
     window.history.back();
   };
-  //ก๊อปของเฟยมา
 
   const [allVideo, setAllVideo]= useState([])
-  console.log('fdgfg ', allVideo)
 
   useEffect(()=>{
     getData()
@@ -21,7 +19,7 @@ const JumpingRope = () => {
 
   const getData = async() =>{
     try {
-      const response = await axios.get('http://localhost:8000/getyoga');
+      const response = await axios.get(import.meta.env.VITE_REACT_API_URL+'getyoga');
       setAllVideo(response.data)
     
     } catch (error) {

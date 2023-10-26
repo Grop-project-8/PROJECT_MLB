@@ -19,7 +19,7 @@ import {Link} from 'react-router-dom'
 
   const getData = async() =>{
     try {
-      const response = await axios.get('http://localhost:8000/getyoga');
+      const response = await axios.get(import.meta.env.VITE_REACT_API_URL+'getyoga');
       setAllVideo(response.data)
     } catch (error) {
       console.log(error)
