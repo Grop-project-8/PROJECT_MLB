@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { register } from "../../Function/auth";
 import { useState } from "react";
 import {GrFormPrevious} from 'react-icons/gr'
-import weight from '../../assets/login/weight.svg'
+import weight from '../../assets/login/weight.jpg'
 
 
 
@@ -36,6 +36,8 @@ function Register() {
       toast.error("Password doesn't match");
     } else if (value.password.length < 6) {
       toast.error("Password should be at least 6 characters long");
+    } else if (weight <= 0 || weight > 200 || height <= 0 || height > 250) {
+      toast.error("Please enter valid weight (1-200) and height (1-250)");
     } else {
       const user = {
         username,
@@ -47,13 +49,14 @@ function Register() {
       register(user)
         .then((res) => {
           toast.success(res.data);
-          window.location.href = "/"; // เมื่อลงทะเบียนเสร็จสิ้น กลับไปยังหน้าหลัก
+          window.location.href = "/"; 
         })
         .catch((err) => {
           toast.error(err.response.data);
         });
     }
   };
+
   
 
   const goBack = () => {
