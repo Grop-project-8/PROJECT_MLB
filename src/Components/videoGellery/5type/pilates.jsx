@@ -41,7 +41,7 @@ import {Link} from 'react-router-dom'
     {
         filtertype.map((video) => (
           <Link to={`/Full/${video._id}`}>
-           <VideoCard  url={video.youtube_embed_link} title={video.title}  img={video.thumbnail} />
+           <VideoCard videoId={video._id}  url={video.youtube_embed_link} title={video.title}  img={video.thumbnail} />
           </Link>
 
         ))}
