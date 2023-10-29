@@ -1,6 +1,5 @@
 ## MOVE LIFE BALANCE
-เพื่อคนที่อยากออกกำลังกายแต่ไม่อยากออกจากบ้าน
-
+For those who want to exercise without leaving home.
 
 ## Description
 MOVE LIFE BALANCE is an online fitness platform for those who are unable or unwilling to leave their homes. The website is designed to help users exercise conveniently in the comfort of their own homes, without the need for special equipment or extensive exercise experience.
@@ -32,5 +31,7 @@ This project is created to serve as a tool for individuals who want to efficient
 5. [Woranon](https://github.com/timworanon)
 
 ## Example
+Click here to view the project : [MOVE LIFE BALANCE](https://project-mlb.vercel.app/)
+
 ![MOVE LIFE BALANCE](/src/assets/Logo.JPG)
 
