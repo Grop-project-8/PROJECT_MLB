@@ -11,6 +11,7 @@ import {Link} from 'react-router-dom'
     window.history.back();
   };
   const [allVideo, setAllVideo]= useState([])
+  console.log('fdgfg ', allVideo)
 
   useEffect(()=>{
     getData()

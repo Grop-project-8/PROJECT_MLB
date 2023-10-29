@@ -33,11 +33,16 @@ const Navbar = () => {
     fetchData();
   }, [setIsLoggedIn]);
 
+  function deleteCookie(name) {
+    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  }
+  
   const handleLogout = async () => {
     try {
       const logout = await logOut();
       toast("Log out");
       setIsLoggedIn(logout.data.isLoggedIn);
+      deleteCookie('token');
       navigate("/");
     } catch (err) {
       console.error("Error logging out:", err);
