@@ -14,6 +14,7 @@ export const checkId = async (value) =>
   });
 
 export const logOut = async (value) =>
+
   await axios.post(import.meta.env.VITE_REACT_API_URL+"logout",value,{
     withCredentials: true,
   });
